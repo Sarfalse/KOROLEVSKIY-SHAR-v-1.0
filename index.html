@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Королевский шар — оформление шарами в Курске</title>
+    <meta
+      name="description"
+      content="Авторские композиции из шаров в Курске. Доставка и оформление за 1 день."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/brand/favicon.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <header class="header" aria-label="Шапка сайта">
+      <div class="header__container">
+        <a class="header__logo" href="#top" aria-label="Королевский шар — на главную">
+          <img
+            src="./assets/brand/logo.svg"
+            alt="Королевский шар"
+            width="194"
+            height="38"
+            decoding="async"
+          />
+        </a>
+
+        <nav class="header__nav" aria-label="Навигация">
+          <a class="header__link" href="#catalog">Каталог</a>
+          <a class="header__link" href="#about">О мастере</a>
+          <a class="header__link" href="#reviews">Отзывы</a>
+          <a class="header__link" href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="header__phone" href="tel:+79202702531" aria-label="Позвонить +7 (920) 270-25-31">
+          <img
+            class="header__phone-icon"
+            src="./assets/icons/phone.svg"
+            alt=""
+            width="18"
+            height="18"
+            decoding="async"
+          />
+          <span class="header__phone-text">+7 (920) 270-25-31</span>
+        </a>
+
+        <a class="btn btn--primary header__cta" href="#order">Обсудить заказ</a>
+
+        <button
+          class="header__burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="header__burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+        <div class="mobile-menu__panel">
+          <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+            <a class="mobile-menu__link" href="#catalog">Каталог</a>
+            <a class="mobile-menu__link" href="#about">О мастере</a>
+            <a class="mobile-menu__link" href="#reviews">Отзывы</a>
+            <a class="mobile-menu__link" href="#contacts">Контакты</a>
+          </nav>
+
+          <a class="mobile-menu__phone" href="tel:+79202702531">
+            <img src="./assets/icons/phone.svg" alt="" width="18" height="18" />
+            <span>+7 (920) 270-25-31</span>
+          </a>
+
+          <a class="btn btn--primary mobile-menu__cta" href="#order">Обсудить заказ</a>
+        </div>
+        <button class="mobile-menu__backdrop" type="button" aria-label="Закрыть меню"></button>
+      </div>
+    </header>
+
+    <main>
+      <div id="top" class="anchor-section" aria-hidden="true"></div>
+
+      <section class="hero" aria-label="Главный экран">
+        <div class="container hero__container">
+          <div class="hero__content" data-reveal>
+            <h1 class="hero__title">
+              Шары,&nbsp;от&nbsp;которых<br />
+              все <span class="hero__title-accent">АХНУТ</span>
+            </h1>
+
+            <p class="hero__subtitle">
+              Авторские композиции из&nbsp;шаров в&nbsp;Курске<br />
+              Доставка и оформление за&nbsp;1&nbsp;день
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#order">Обсудить заказ</a>
+              <a class="btn btn--outline" href="#catalog">
+                Смотреть каталог
+                <span class="btn__icon" aria-hidden="true">
+                  <svg viewBox="0 0 18 18" width="18" height="18">
+                    <path
+                      d="M9 1.28564V17.9999"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M4.5 5.78564L9 1.28564L13.5 5.78564"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="hero__trust" aria-label="Преимущества">
+              <span class="hero__trust-item">200+ композиций</span>
+              <span class="hero__trust-dot" aria-hidden="true"></span>
+              <span class="hero__trust-item">Доставка и установка</span>
+              <span class="hero__trust-dot" aria-hidden="true"></span>
+              <span class="hero__trust-item">От 1 000 ₽</span>
+            </div>
+          </div>
+
+          <div class="hero__media" aria-hidden="true">
+            <img
+              class="hero__image"
+              src="./assets/hero/hero-balloons.png"
+              alt=""
+              width="443"
+              height="684"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages" aria-label="Преимущества">
+        <div class="container">
+          <div class="advantages__inner">
+            <header class="advantages__header" data-reveal>
+              <h2 class="advantages__title">Ваш праздник — наша ответственность</h2>
+              <p class="advantages__subtitle">
+                Работаем так, чтобы вы ни о чём не беспокоились
+              </p>
+            </header>
+
+            <div class="advantages__grid">
+              <article class="adv-card" data-reveal>
+                <img
+                  class="adv-card__icon"
+                  src="./assets/icons/advantages/design.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="adv-card__title">Дизайн под ваш праздник</h3>
+                <p class="adv-card__text">Подберем цвета, размеры и стиль под вашу идею</p>
+              </article>
+
+              <article class="adv-card" data-reveal>
+                <img
+                  class="adv-card__icon"
+                  src="./assets/icons/advantages/key.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="adv-card__title">Оформление под ключ</h3>
+                <p class="adv-card__text">Все привезем, подготовим и установим</p>
+              </article>
+
+              <article class="adv-card" data-reveal>
+                <img
+                  class="adv-card__icon"
+                  src="./assets/icons/advantages/balloon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="adv-card__title">500+ праздников</h3>
+                <p class="adv-card__text">Опыт в праздниках, свадьбах и выписках</p>
+              </article>
+
+              <article class="adv-card" data-reveal>
+                <img
+                  class="adv-card__icon"
+                  src="./assets/icons/advantages/delivery.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="adv-card__title">Быстрая доставка</h3>
+                <p class="adv-card__text">Привезем все точно к началу праздника</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog" aria-label="Каталог">
+        <div class="container">
+          <header class="catalog__header" data-reveal>
+            <h2 class="catalog__title">Каталог работ</h2>
+            <p class="catalog__subtitle">
+              Понравилась композиция? Напишите нам — повторим именно для вас
+            </p>
+          </header>
+
+          <div class="catalog__filters" role="tablist" aria-label="Категории" data-reveal>
+            <button class="chip chip--active" type="button" data-filter="all" role="tab" aria-selected="true">
+              Все
+            </button>
+            <button class="chip" type="button" data-filter="hit" role="tab" aria-selected="false">
+              Хит <span aria-hidden="true">🔥</span>
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="birthday"
+              role="tab"
+              aria-selected="false"
+            >
+              День рождения
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="wedding"
+              role="tab"
+              aria-selected="false"
+            >
+              Свадьба
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="discharge"
+              role="tab"
+              aria-selected="false"
+            >
+              Выписка
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="opening"
+              role="tab"
+              aria-selected="false"
+            >
+              Открытие
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="gifts"
+              role="tab"
+              aria-selected="false"
+            >
+              Подарки
+            </button>
+          </div>
+
+          <div class="catalog__grid">
+            <article class="catalog-card" data-category="birthday" data-reveal>
+              <span class="catalog-card__badge">День рождения</span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-for-party.png"
+                alt="Сет для праздника"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет для праздника</h3>
+                <p class="catalog-card__text">
+                  Стеклянный шар «Гигант» с индивидуальной надписью
+                </p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 3 000 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card" data-category="hit" data-reveal>
+              <span class="catalog-card__badge catalog-card__badge--hit">
+                Хит <span aria-hidden="true">🔥</span>
+              </span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-for-her.png"
+                alt="Сет «Для нее»"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет «Для нее»</h3>
+                <p class="catalog-card__text">
+                  Нежная арка в розово-белых тонах для девочек
+                </p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 2 500 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card" data-category="discharge" data-reveal>
+              <span class="catalog-card__badge">Выписка</span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-on-discharge.png"
+                alt="Сет на выписку"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет на выписку</h3>
+                <p class="catalog-card__text">Отличный подарок для своей любимой</p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 3 700 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card" data-category="gifts" data-reveal>
+              <span class="catalog-card__badge">Подарки</span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-kitties.png"
+                alt="Сет «Кошечки»"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет «Кошечки»</h3>
+                <p class="catalog-card__text">Нежный сет для маленькой принцессы</p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 2 300 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card" data-category="gifts" data-reveal>
+              <span class="catalog-card__badge">Подарки</span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/double-ball-bachelorette.png"
+                alt="Двойной шар для девичника"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Двойной шар для девичника</h3>
+                <p class="catalog-card__text">
+                  Внутри большого шара сердце с новой фамилией!
+                </p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 2 500 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card" data-category="wedding" data-reveal>
+              <span class="catalog-card__badge catalog-card__badge--hit">
+                Хит <span aria-hidden="true">🔥</span>
+              </span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-love.png"
+                alt="Сет «Любовь»"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет «Любовь»</h3>
+                <p class="catalog-card__text">Яркое дополнение вашего праздника</p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 4 000 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="catalog-card catalog-card--extra"
+              data-category="gifts"
+              hidden
+              data-reveal
+            >
+              <span class="catalog-card__badge">Подарки</span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-kitties.png"
+                alt="Сет «Кошечки»"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет «Кошечки»</h3>
+                <p class="catalog-card__text">Нежный сет для маленькой принцессы</p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 2 300 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="catalog-card catalog-card--extra"
+              data-category="wedding"
+              hidden
+              data-reveal
+            >
+              <span class="catalog-card__badge catalog-card__badge--hit">
+                Хит <span aria-hidden="true">🔥</span>
+              </span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-love.png"
+                alt="Сет «Любовь»"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет «Любовь»</h3>
+                <p class="catalog-card__text">Яркое дополнение вашего праздника</p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 4 000 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="catalog-card catalog-card--extra"
+              data-category="discharge"
+              hidden
+              data-reveal
+            >
+              <span class="catalog-card__badge">Выписка</span>
+              <img
+                class="catalog-card__image"
+                src="./assets/catalog/set-on-discharge.png"
+                alt="Сет на выписку"
+                width="392"
+                height="201"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="catalog-card__body">
+                <h3 class="catalog-card__title">Сет на выписку</h3>
+                <p class="catalog-card__text">Отличный подарок для своей любимой</p>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-card__price">от 3 700 ₽</div>
+                  <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="catalog__more" data-reveal>
+            <button id="catalog-more" class="btn btn--ghost" type="button">
+              Показать еще работы
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== КАК ПРОХОДИТ ЗАКАЗ ===== -->
+      <section id="process" class="process" aria-label="Как проходит заказ">
+        <div class="container">
+          <header class="process__header" data-reveal>
+            <h2 class="process__title">Как проходит заказ</h2>
+            <p class="process__subtitle">Всего 4 шага — и оформление готово к&nbsp;вашему празднику</p>
+          </header>
+
+          <div class="process__body">
+            <div class="process__rail" aria-hidden="true">
+              <div class="process__line"></div>
+            </div>
+
+            <ol class="process__steps" aria-label="Шаги оформления заказа">
+              <li class="process__step" data-reveal>
+                <div class="process__num" aria-hidden="true">1</div>
+                <div class="process__step-content">
+                  <h3 class="process__step-title">Оставляете заявку</h3>
+                  <p class="process__step-text">Напишите или оставьте заявку на сайте — ответим в&nbsp;течение 10–15 минут</p>
+                </div>
+              </li>
+              <li class="process__step" data-reveal>
+                <div class="process__num" aria-hidden="true">2</div>
+                <div class="process__step-content">
+                  <h3 class="process__step-title">Подбираем композицию</h3>
+                  <p class="process__step-text">Уточним детали и предложим варианты под ваш праздник <br>и бюджет</p>
+                </div>
+              </li>
+              <li class="process__step" data-reveal>
+                <div class="process__num" aria-hidden="true">3</div>
+                <div class="process__step-content">
+                  <h3 class="process__step-title">Согласовываем и готовим</h3>
+                  <p class="process__step-text">Утверждаем дизайн, после чего собираем композицию к&nbsp;нужной дате</p>
+                </div>
+              </li>
+              <li class="process__step" data-reveal>
+                <div class="process__num" aria-hidden="true">4</div>
+                <div class="process__step-content">
+                  <h3 class="process__step-title">Доставляем и оформляем</h3>
+                  <p class="process__step-text">Привезём, установим и всё подготовим — вам остаётся только наслаждаться праздником</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== КВИЗ ===== -->
+      <section id="quiz" class="quiz" aria-label="Квиз — подобрать декор">
+        <div class="container">
+          <div class="quiz__card">
+
+            <!-- Badge + Title -->
+            <div class="quiz__top">
+              <span class="quiz__badge">Скидка 10% на первый заказ</span>
+              <h2 class="quiz__title">Подберём декор за 1 минуту + скидка 10%</h2>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="quiz__progress" id="quiz-progress">
+              <div class="quiz__progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+                <div class="quiz__progress-fill" id="quiz-progress-fill"></div>
+              </div>
+              <div class="quiz__progress-meta">
+                <span class="quiz__progress-label">Шаг <span id="quiz-step-current">1</span> из 5</span>
+                <span class="quiz__trust">
+                  <svg class="quiz__trust-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Ответ займёт не больше минуты
+                </span>
+              </div>
+            </div>
+
+            <!-- Steps -->
+            <div class="quiz__steps" id="quiz-steps">
+
+              <!-- Шаг 1: Что оформить -->
+              <div class="quiz__step is-active" data-step="1">
+                <p class="quiz__question">Что нужно оформить?</p>
+                <div class="quiz__options quiz__options--photo">
+                  <button class="quiz__option" data-value="photobooth" type="button">
+                    <span class="quiz__option-img quiz__option-img--photobooth" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/photo-zone.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Фотозона</span>
+                  </button>
+                  <button class="quiz__option" data-value="balloons" type="button">
+                    <span class="quiz__option-img quiz__option-img--balloons" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/decor.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Оформление воздушными шарами</span>
+                  </button>
+                  <button class="quiz__option" data-value="complex" type="button">
+                    <span class="quiz__option-img quiz__option-img--complex" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/holiday.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Комплексное оформление праздника</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Шаг 2: Тип праздника -->
+              <div class="quiz__step" data-step="2">
+                <p class="quiz__question">Какой у вас праздник?</p>
+                <div class="quiz__options quiz__options--photo quiz__options--5col">
+                  <button class="quiz__option" data-value="birthday" type="button">
+                    <span class="quiz__option-img quiz__option-img--birthday" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/birthday.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">День рождения</span>
+                  </button>
+                  <button class="quiz__option" data-value="corporate" type="button">
+                    <span class="quiz__option-img quiz__option-img--corporate" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/corporate%20event.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Корпоратив</span>
+                  </button>
+                  <button class="quiz__option" data-value="wedding" type="button">
+                    <span class="quiz__option-img quiz__option-img--wedding" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/marry.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Свадьба</span>
+                  </button>
+                  <button class="quiz__option" data-value="gender" type="button">
+                    <span class="quiz__option-img quiz__option-img--gender" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/gender%20party.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Гендер-пати</span>
+                  </button>
+                  <button class="quiz__option" data-value="other" type="button">
+                    <span class="quiz__option-img quiz__option-img--other" aria-hidden="true">
+                      <img
+                        class="quiz__option-img-photo"
+                        src="./assets/quiz/surprise.jpg"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                    <span class="quiz__option-label">Сюрприз / другое</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Шаг 3: Бюджет -->
+              <div class="quiz__step" data-step="3">
+                <p class="quiz__question">На какой бюджет рассчитываете?</p>
+                <div class="quiz__options quiz__options--list">
+                  <button class="quiz__option" data-value="budget-low" type="button">
+                    <span class="quiz__option-label">до 20&nbsp;000 ₽</span>
+                    <span class="quiz__option-check" aria-hidden="true"></span>
+                  </button>
+                  <button class="quiz__option" data-value="budget-mid" type="button">
+                    <span class="quiz__option-label">20&nbsp;000 — 40&nbsp;000 ₽</span>
+                    <span class="quiz__option-check" aria-hidden="true"></span>
+                  </button>
+                  <button class="quiz__option" data-value="budget-high" type="button">
+                    <span class="quiz__option-label">от 40&nbsp;000 ₽</span>
+                    <span class="quiz__option-check" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Шаг 4: Когда -->
+              <div class="quiz__step" data-step="4">
+                <p class="quiz__question">Когда нужен декор?</p>
+                <div class="quiz__options quiz__options--list">
+                  <button class="quiz__option" data-value="urgent" type="button">
+                    <span class="quiz__option-label">Сегодня / завтра</span>
+                    <span class="quiz__option-check" aria-hidden="true"></span>
+                  </button>
+                  <button class="quiz__option" data-value="soon" type="button">
+                    <span class="quiz__option-label">В ближайшие дни</span>
+                    <span class="quiz__option-check" aria-hidden="true"></span>
+                  </button>
+                  <button class="quiz__option quiz__option--date" data-value="date" type="button">
+                    <span class="quiz__option-label">
+                      Есть дата
+                      <span class="quiz__date-display" id="quiz-date-display"></span>
+                    </span>
+                    <span class="quiz__option-check" aria-hidden="true"></span>
+                    <input class="quiz__date-input" id="quiz-date-input" type="date" tabindex="-1" aria-label="Выберите дату">
+                  </button>
+                </div>
+              </div>
+
+              <!-- Шаг 5: Пожелания (необязательный) -->
+              <div class="quiz__step" data-step="5">
+                <p class="quiz__question">
+                  Есть пожелания по оформлению?
+                  <span class="quiz__optional">(не обязательно)</span>
+                </p>
+                <textarea
+                  class="quiz__textarea"
+                  id="quiz-wishes"
+                  placeholder="Опишите ваши пожелания — стиль, цвета, тематика..."
+                  rows="5"
+                  aria-label="Ваши пожелания"
+                ></textarea>
+              </div>
+
+              <!-- Шаг 6: Контакты -->
+              <div class="quiz__step" data-step="6">
+                <p class="quiz__question">Куда отправить варианты и расчёт?</p>
+                <div class="quiz__contacts">
+                  <input class="quiz__input" id="quiz-name" type="text" placeholder="Ваше имя" autocomplete="name">
+                  <input class="quiz__input" id="quiz-phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+                  <label class="quiz__consent">
+                    <input type="checkbox" class="quiz__checkbox" id="quiz-consent">
+                    <span class="quiz__consent-text">Я соглашаюсь с <a href="#" class="quiz__consent-link">политикой конфиденциальности</a></span>
+                  </label>
+                </div>
+              </div>
+
+            </div><!-- /quiz__steps -->
+
+            <!-- Успех -->
+            <div class="quiz__success" id="quiz-success" aria-live="polite">
+              <div class="quiz__success-icon" aria-hidden="true">
+                <svg class="quiz__success-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="32" r="28" stroke="#e4ba45" stroke-width="2.5"/>
+                  <path d="M20 33 29 42 44 24" stroke="#e4ba45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="quiz__success-title">Спасибо! Варианты уже подбираем</h3>
+              <p class="quiz__success-text">Свяжемся с вами в течение 10–15 минут и пришлём подходящие варианты со скидкой 10% на первый заказ.</p>
+            </div>
+
+            <!-- Навигация -->
+            <div class="quiz__nav" id="quiz-nav">
+              <button class="quiz__btn-back" id="quiz-back" type="button" hidden>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M10 13L5 8L10 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Назад
+              </button>
+              <button class="btn btn--primary quiz__btn-next" id="quiz-next" type="button">
+                Продолжить
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ОТЗЫВЫ ===== -->
+      <section id="reviews" class="reviews" aria-label="Отзывы клиентов">
+        <div class="container">
+
+          <header class="reviews__header" data-reveal>
+            <h2 class="reviews__title">Что говорят клиенты</h2>
+            <div class="reviews__meta">
+              <span class="reviews__stars" aria-label="Рейтинг 4.9 из 5">
+                <svg class="reviews__star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l1.85 3.75L14 5.5l-3 2.92.7 4.08L8 10.25 4.3 12.5l.7-4.08L2 5.5l4.15-.75z" fill="#e4ba45"/></svg>
+                <svg class="reviews__star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l1.85 3.75L14 5.5l-3 2.92.7 4.08L8 10.25 4.3 12.5l.7-4.08L2 5.5l4.15-.75z" fill="#e4ba45"/></svg>
+                <svg class="reviews__star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l1.85 3.75L14 5.5l-3 2.92.7 4.08L8 10.25 4.3 12.5l.7-4.08L2 5.5l4.15-.75z" fill="#e4ba45"/></svg>
+                <svg class="reviews__star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l1.85 3.75L14 5.5l-3 2.92.7 4.08L8 10.25 4.3 12.5l.7-4.08L2 5.5l4.15-.75z" fill="#e4ba45"/></svg>
+                <svg class="reviews__star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l1.85 3.75L14 5.5l-3 2.92.7 4.08L8 10.25 4.3 12.5l.7-4.08L2 5.5l4.15-.75z" fill="#e4ba45"/></svg>
+              </span>
+              <span class="reviews__rating">4.9</span>
+              <span class="reviews__divider" aria-hidden="true">·</span>
+              <a class="reviews__link" href="https://vk.com" target="_blank" rel="noopener">
+                120 отзывов на ВКонтакте
+                <svg class="reviews__link-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 12L12 2M12 2H5M12 2v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </header>
+
+          <div class="reviews__grid">
+            <div class="reviews__item" data-reveal>
+              <img class="reviews__screenshot"
+                   src="./assets/review/review-1.png"
+                   alt="Скриншот отзыва клиента №1"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <div class="reviews__item" data-reveal>
+              <img class="reviews__screenshot"
+                   src="./assets/review/review-2.png"
+                   alt="Скриншот отзыва клиента №2"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <div class="reviews__item" data-reveal>
+              <img class="reviews__screenshot"
+                   src="./assets/review/review-3.png"
+                   alt="Скриншот отзыва клиента №3"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== О МАСТЕРЕ ===== -->
+      <section id="about" class="about" aria-label="О мастере">
+        <div class="container">
+
+          <div class="about__inner" data-reveal>
+
+            <!-- Фото -->
+            <div class="about__photo-wrap">
+              <div class="about__photo-bg" aria-hidden="true"></div>
+              <img
+                class="about__photo"
+                src="./assets/img/irina.jpg"
+                alt="Ирина — мастер праздничного оформления"
+                width="480"
+                height="560"
+                loading="lazy"
+                decoding="async"
+              />
+              <!-- декоративная искра -->
+              <svg class="about__spark" viewBox="0 0 28 28" aria-hidden="true">
+                <path d="M14 0c0 7.732-6.268 14-14 14 7.732 0 14 6.268 14 14 0-7.732 6.268-14 14-14-7.732 0-14-6.268-14-14z" fill="var(--accent)"/>
+              </svg>
+            </div>
+
+            <!-- Текст -->
+            <div class="about__content">
+              <span class="about__badge">Знакомьтесь</span>
+
+              <h2 class="about__title">
+                Привет, я Ирина —&nbsp;мастер праздничного оформления
+              </h2>
+
+              <div class="about__body">
+                <p>Занимаюсь воздушными шарами уже несколько лет, и&nbsp;каждый раз это маленькое волшебство. За&nbsp;это время — сотни счастливых лиц и&nbsp;ни одного одинакового заказа.</p>
+                <p>Каждую композицию я&nbsp;согласую лично — чтобы получилось именно так, как вы&nbsp;мечтали. Никаких шаблонов, только индивидуальный подход.</p>
+                <p>Работаю в&nbsp;Курске и&nbsp;области. Пишите — всегда отвечу быстро и&nbsp;помогу выбрать лучший вариант для вашего праздника.</p>
+              </div>
+
+              <div class="about__divider" aria-hidden="true"></div>
+
+              <ul class="about__stats" aria-label="Статистика">
+                <li class="about__stat">
+                  <span class="about__stat-value">500+</span>
+                  <span class="about__stat-label">мероприятий</span>
+                </li>
+                <li class="about__stat">
+                  <span class="about__stat-value">4.9<span class="about__star">★</span></span>
+                  <span class="about__stat-label">средняя оценка</span>
+                </li>
+                <li class="about__stat">
+                  <span class="about__stat-value">5 лет</span>
+                  <span class="about__stat-label">в профессии</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA / КОНТАКТЫ ===== -->
+      <section id="contacts" class="cta" aria-label="Оставить заявку">
+        <div class="container">
+          <div class="cta__inner">
+
+            <!-- Левая колонка: заголовок + соцсети -->
+            <div class="cta__left" data-reveal>
+              <h2 class="cta__title">Готова создать<br>ваш праздник</h2>
+              <p class="cta__subtitle">Напишите удобным способом — обсудим детали и рассчитаем стоимость. Отвечаю быстро.</p>
+
+              <div class="cta__socials">
+                <a class="cta__social" href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте">
+                  <svg class="cta__social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z" fill="none"/>
+                    <path d="M12.676 16.5c-5.267 0-8.27-3.617-8.392-9.626h2.637c.082 4.411 2.031 6.282 3.569 6.67V6.874h2.484v3.8c1.52-.163 3.116-1.904 3.655-3.8h2.484a7.384 7.384 0 01-3.39 4.839 7.637 7.637 0 013.776 4.787h-2.73a4.71 4.71 0 00-3.795-3.39v3.39h-.298z" fill="currentColor"/>
+                  </svg>
+                  <span>ВКонтакте</span>
+                </a>
+                <a class="cta__social" href="https://max.ru" target="_blank" rel="noopener" aria-label="Max">
+                  <svg class="cta__social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M7.5 15.5V8.5l4.5 4 4.5-4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Max</span>
+                </a>
+                <a class="cta__social" href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg class="cta__social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M21.8 4.1L2.6 11.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.3.7.2 1 .9 1 .5 0 .8-.2 1.1-.5l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-.9L22.8 5.2c.3-1.4-.5-2-1-1.1z" fill="currentColor"/>
+                  </svg>
+                  <span>Telegram</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Правая колонка: форма -->
+            <div class="cta__form-wrap" data-reveal>
+              <div class="cta__form-header">
+                <div>
+                  <h3 class="cta__form-title">Оставить заявку</h3>
+                  <p class="cta__form-hint">Ирина свяжется в течение часа</p>
+                </div>
+              </div>
+
+              <form class="cta__form" id="cta-form" novalidate>
+                <div class="cta__field">
+                  <label class="cta__label" for="cta-name">Ваше имя</label>
+                  <input class="cta__input" id="cta-name" type="text" placeholder="Как вас зовут?" autocomplete="name">
+                </div>
+
+                <div class="cta__field">
+                  <label class="cta__label" for="cta-phone">Номер телефона</label>
+                  <input class="cta__input" id="cta-phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+                </div>
+
+                <div class="cta__field">
+                  <label class="cta__label" for="cta-type">Тип мероприятия</label>
+                  <div class="cta__select-wrap">
+                    <select class="cta__select" id="cta-type">
+                      <option value="" disabled selected>Выберите тип</option>
+                      <option value="birthday">День рождения</option>
+                      <option value="wedding">Свадьба</option>
+                      <option value="discharge">Выписка из роддома</option>
+                      <option value="opening">Открытие магазина</option>
+                      <option value="gift">Подарок</option>
+                      <option value="other">Другое</option>
+                    </select>
+                    <svg class="cta__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="cta__field">
+                  <label class="cta__label" for="cta-comment">
+                    Комментарий
+                    <span class="cta__label-hint">(не обязательно)</span>
+                  </label>
+                  <textarea class="cta__textarea" id="cta-comment" placeholder="Расскажите что хотите..." rows="3"></textarea>
+                </div>
+
+                <label class="cta__consent">
+                  <input class="cta__checkbox" type="checkbox" id="cta-consent">
+                  <span class="cta__consent-text">Я соглашаюсь с <a href="#" class="cta__consent-link">политикой конфиденциальности</a></span>
+                </label>
+
+                <button class="cta__submit" type="submit">
+                  Отправить заявку
+                </button>
+              </form>
+
+              <!-- Успех -->
+              <div class="cta__success" id="cta-success" aria-live="polite">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <circle cx="24" cy="24" r="20" stroke="var(--accent)" stroke-width="2"/>
+                  <path d="M15 25l7 7 11-14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h4 class="cta__success-title">Заявка отправлена!</h4>
+                <p class="cta__success-text">Ирина свяжется с вами в течение часа.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" aria-label="Подвал сайта">
+      <div class="container">
+
+        <!-- Верхняя строка -->
+        <div class="footer__top">
+
+          <!-- Колонка 1: лого + слоган + соцсети -->
+          <div class="footer__col footer__col--brand">
+            <a class="footer__logo" href="#top" aria-label="Королевский шар — на главную">
+              <img
+                src="./assets/brand/logo.svg"
+                alt="Королевский шар"
+                width="160"
+                height="32"
+                decoding="async"
+                class="footer__logo-img"
+              />
+            </a>
+            <p class="footer__tagline">Авторские композиции из&nbsp;воздушных шаров в&nbsp;Курске. Оформление любых мероприятий под ключ.</p>
+
+            <div class="footer__socials" aria-label="Мы в соцсетях">
+              <!-- ВКонтакте -->
+              <a class="footer__social" href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12.676 16.5c-5.267 0-8.27-3.617-8.392-9.626h2.637c.082 4.411 2.031 6.282 3.569 6.67V6.874h2.484v3.8c1.52-.163 3.116-1.904 3.655-3.8h2.484a7.384 7.384 0 01-3.39 4.839 7.637 7.637 0 013.776 4.787h-2.73a4.71 4.71 0 00-3.795-3.39v3.39h-.298z" fill="currentColor"/>
+                </svg>
+              </a>
+              <!-- Max -->
+              <a class="footer__social" href="https://max.ru" target="_blank" rel="noopener" aria-label="Max">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M7.5 15.5V8.5l4.5 4 4.5-4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <!-- Telegram -->
+              <a class="footer__social" href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M21.8 4.1L2.6 11.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.3.7.2 1 .9 1 .5 0 .8-.2 1.1-.5l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-.9L22.8 5.2c.3-1.4-.5-2-1-1.1z" fill="currentColor"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Колонка 2: Навигация -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">Навигация</h3>
+            <nav aria-label="Навигация в подвале">
+              <ul class="footer__nav">
+                <li><a class="footer__link" href="#catalog">Каталог</a></li>
+                <li><a class="footer__link" href="#reviews">Отзывы</a></li>
+                <li><a class="footer__link" href="#about">О мастере</a></li>
+                <li><a class="footer__link" href="#contacts">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Колонка 3: Контакты -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">Контакты</h3>
+            <ul class="footer__contacts">
+              <li>
+                <a class="footer__contact" href="tel:+79202702531" aria-label="Телефон">
+                  <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M14.4 10.907c-.44-.427-2.827-1.84-3.36-2.027-.533-.186-.813-.013-.973.24l-.48.76c-.16.24-.307.267-.56.133-.8-.427-2.2-1.493-3.147-2.64-.88-1.067-1.373-2.347-1.56-2.96-.107-.347-.027-.507.2-.587l.88-.293c.28-.08.573-.293.44-.787-.16-.547-1.04-3.093-1.413-3.427-.373-.333-.68-.253-.88-.16A4.8 4.8 0 001.6 2.547c-.32.293-.96 1.28-.16 3.04.8 1.76 1.813 3.267 3.387 4.8 1.573 1.533 3.04 2.48 5.04 3.253 2 .773 3.04.24 3.413-.053a4.933 4.933 0 001.28-1.44c.187-.32.24-.6-.16-.853-.053-.027-.013-.013 0 0-.04-.04-.04-.04 0 0z" fill="currentColor"/>
+                  </svg>
+                  +7 (920) 270-25-31
+                </a>
+              </li>
+              <li>
+                <a class="footer__contact" href="mailto:info@korolevskiy-shar.ru" aria-label="Email">
+                  <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  </svg>
+                  info@korolevskiy-shar.ru
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Разделитель -->
+        <div class="footer__divider" aria-hidden="true"></div>
+
+        <!-- Нижняя строка -->
+        <div class="footer__bottom">
+          <p class="footer__copy">© 2026 Королевский шар. Курск</p>
+          <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+          <p class="footer__dev">
+            Разработка сайта
+            <a class="footer__dev-link" href="https://www.kazankov.studio/" target="_blank" rel="noopener">Kazankov Studio</a>
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- ===== Pop-up: Оставить заявку / Интересует ===== -->
+    <div class="order-modal" id="order-modal-request" aria-hidden="true">
+      <button class="order-modal__backdrop" type="button" aria-label="Закрыть"></button>
+      <div class="order-modal__dialog" role="dialog" aria-modal="true" aria-label="Оставить заявку">
+        <button class="order-modal__close modal-close" type="button" aria-label="Закрыть">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div class="cta__form-wrap">
+          <div class="cta__form-header">
+            <div>
+              <h3 class="cta__form-title">Оставить заявку</h3>
+              <p class="cta__form-hint">Ирина свяжется в течение часа</p>
+            </div>
+          </div>
+
+          <form class="cta__form" id="order-request-form" novalidate>
+            <div class="cta__field">
+              <label class="cta__label" for="order-request-name">Ваше имя</label>
+              <input class="cta__input" id="order-request-name" type="text" placeholder="Как вас зовут?" autocomplete="name">
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-request-phone">Номер телефона</label>
+              <input class="cta__input" id="order-request-phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-request-date">Дата мероприятия</label>
+              <input class="cta__input" id="order-request-date" type="date" aria-label="Дата мероприятия">
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-request-type">Тип мероприятия</label>
+              <div class="cta__select-wrap">
+                <select class="cta__select" id="order-request-type">
+                  <option value="" disabled selected>Выберите тип</option>
+                  <option value="birthday">День рождения</option>
+                  <option value="wedding">Свадьба</option>
+                  <option value="discharge">Выписка из роддома</option>
+                  <option value="opening">Открытие магазина</option>
+                  <option value="gift">Подарок</option>
+                  <option value="other">Другое</option>
+                </select>
+                <svg class="cta__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-request-comment">
+                Комментарий
+                <span class="cta__label-hint">(не обязательно)</span>
+              </label>
+              <textarea class="cta__textarea" id="order-request-comment" placeholder="Расскажите что хотите..." rows="3"></textarea>
+            </div>
+
+            <label class="cta__consent">
+              <input class="cta__checkbox" type="checkbox" id="order-request-consent">
+              <span class="cta__consent-text">Я соглашаюсь с <a href="#" class="cta__consent-link">политикой конфиденциальности</a></span>
+            </label>
+
+            <button class="cta__submit" type="submit">
+              Отправить заявку
+            </button>
+          </form>
+
+          <div class="cta__success" id="order-request-success" aria-live="polite">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M15 25l7 7 11-14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h4 class="cta__success-title">Заявка отправлена!</h4>
+            <p class="cta__success-text">Ирина свяжется с вами в течение часа.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-modal" id="order-modal-interest" aria-hidden="true">
+      <button class="order-modal__backdrop" type="button" aria-label="Закрыть"></button>
+      <div class="order-modal__dialog" role="dialog" aria-modal="true" aria-label="Интересует предложение">
+        <button class="order-modal__close modal-close" type="button" aria-label="Закрыть">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div class="cta__form-wrap">
+          <div class="cta__form-header">
+            <div>
+              <h3 class="cta__form-title">Оставить заявку</h3>
+              <p class="cta__form-hint">
+                Интересует: <span id="order-interest-title">—</span>
+              </p>
+            </div>
+          </div>
+
+          <form class="cta__form" id="order-interest-form" novalidate>
+            <div class="cta__field">
+              <label class="cta__label" for="order-interest-name">Ваше имя</label>
+              <input class="cta__input" id="order-interest-name" type="text" placeholder="Как вас зовут?" autocomplete="name">
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-interest-phone">Номер телефона</label>
+              <input class="cta__input" id="order-interest-phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-interest-date">Дата мероприятия</label>
+              <input class="cta__input" id="order-interest-date" type="date" aria-label="Дата мероприятия">
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-interest-type">Тип мероприятия</label>
+              <div class="cta__select-wrap">
+                <select class="cta__select" id="order-interest-type">
+                  <option value="" disabled selected>Выберите тип</option>
+                  <option value="birthday">День рождения</option>
+                  <option value="wedding">Свадьба</option>
+                  <option value="discharge">Выписка из роддома</option>
+                  <option value="opening">Открытие магазина</option>
+                  <option value="gift">Подарок</option>
+                  <option value="other">Другое</option>
+                </select>
+                <svg class="cta__select-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="cta__field">
+              <label class="cta__label" for="order-interest-comment">
+                Комментарий
+                <span class="cta__label-hint">(не обязательно)</span>
+              </label>
+              <textarea class="cta__textarea" id="order-interest-comment" placeholder="Расскажите что хотите..." rows="3"></textarea>
+            </div>
+
+            <label class="cta__consent">
+              <input class="cta__checkbox" type="checkbox" id="order-interest-consent">
+              <span class="cta__consent-text">Я соглашаюсь с <a href="#" class="cta__consent-link">политикой конфиденциальности</a></span>
+            </label>
+
+            <button class="cta__submit" type="submit">
+              Отправить заявку
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2 8h12M9 4l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+
+          <div class="cta__success" id="order-interest-success" aria-live="polite">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="24" r="20" stroke="var(--accent)" stroke-width="2"/>
+              <path d="M15 25l7 7 11-14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h4 class="cta__success-title">Заявка отправлена!</h4>
+            <p class="cta__success-text">Ирина свяжется с вами в течение часа.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay: просмотр отзыва крупно -->
+    <div class="reviews-lightbox" id="reviews-lightbox" aria-hidden="true">
+      <button class="reviews-lightbox__backdrop" type="button" aria-label="Закрыть большой отзыв"></button>
+      <div class="reviews-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Отзыв клиента">
+        <button class="reviews-lightbox__close" type="button" aria-label="Закрыть">
+          <svg class="reviews-lightbox__close-icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+            <path
+              d="M4 4l10 10M14 4L4 14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <img
+          class="reviews-lightbox__image"
+          id="reviews-lightbox-image"
+          src=""
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+

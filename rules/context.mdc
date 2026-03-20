@@ -1,0 +1,90 @@
+{
+  "project": {
+    "name": "Королевский шар",
+    "type": "Landing page",
+    "business": "Студия по оформлению шарами (Курск)",
+    "goal": "Сверстать лендинг по Figma блоками (pixel-close), с хорошим UX и адаптивом. Подготовить структуру под дальнейшее наполнение разделов и конверсию (каталог/портфолио/отзывы/контакты/заказ)."
+  },
+  "sourceOfTruth": {
+    "design": "Figma",
+    "figmaFileName": "Королевский Шар",
+    "links": {
+      "file": "https://www.figma.com/design/7LphyuOaQEZIF4yqMFaqqD/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-%D0%A8%D0%B0%D1%80",
+      "nodes": {
+        "header": "157:151",
+        "hero": "157:132",
+        "advantages": "162:203"
+      }
+    }
+  },
+  "stack": {
+    "frontend": ["HTML", "CSS", "JavaScript"],
+    "assets": "SVG/PNG exported from Figma",
+    "notes": [
+      "Без сборщика и фреймворков на текущем этапе.",
+      "Шрифты подключаются через Google Fonts (Montserrat, Inter)."
+    ]
+  },
+  "implementationState": {
+    "pages": ["index.html"],
+    "styles": ["styles.css"],
+    "scripts": ["script.js"],
+    "implementedSections": [
+      {
+        "id": "header",
+        "description": "Лого (SVG), навигация, телефон, CTA. На мобильных — бургер и панель меню."
+      },
+      {
+        "id": "hero",
+        "description": "Заголовок в 2 строки, подзаголовок, 2 CTA-кнопки, trust-line, изображение шаров с анимацией 'ветра'."
+      },
+      {
+        "id": "advantages",
+        "description": "Заголовок+подзаголовок, 4 карточки 186×217, hover-свечение на карточках."
+      }
+    ],
+    "assetsExported": {
+      "figmaScreens": ["assets/figma/hero.png", "assets/figma/header.png", "assets/figma/advantages.png"],
+      "brand": ["assets/brand/logo.svg"],
+      "icons": [
+        "assets/icons/phone.svg",
+        "assets/icons/advantages/design.svg",
+        "assets/icons/advantages/key.svg",
+        "assets/icons/advantages/balloon.svg",
+        "assets/icons/advantages/delivery.svg"
+      ],
+      "images": ["assets/hero/hero-balloons.png"]
+    }
+  },
+  "codingConventions": {
+    "naming": {
+      "css": "BEM-like classes (block__element, modifiers with --)",
+      "sections": "Each major block has its own block class (e.g. .hero, .advantages)."
+    },
+    "responsive": {
+      "breakpoints": {
+        "desktop": "1280px+",
+        "tabletLandscape": "1024px–1279px",
+        "tabletPortrait": "768px–1023px",
+        "mobile": "≤767px"
+      },
+      "approach": "Desktop-first; media queries in the end of styles.css as one block; desktop (1280px+) is the reference."
+    },
+    "accessibility": [
+      "Use semantic tags (header/nav/main/section).",
+      "Provide aria-label where needed.",
+      "Respect prefers-reduced-motion for animations."
+    ],
+    "behavior": [
+      "Smooth scrolling for anchor links.",
+      "Mobile menu closes by backdrop click / Esc / link click.",
+      "Header is fixed to top on all breakpoints; on scroll it adds bottom border and slightly shrinks in height (padding/logo)."
+    ]
+  },
+  "nextSteps": [
+    "Продолжить верстку следующими блоками из Figma (портфолио, каталог, отзывы, контакты, форма заказа).",
+    "Добавить реальный контент/ссылки и заполнить якорные секции.",
+    "Опционально: подключить сборку (vite) и оптимизацию ассетов, если потребуется."
+  ]
+}
+

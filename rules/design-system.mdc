@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "project": "Королевский шар",
+    "source": "Current HTML/CSS implementation + Figma local styles",
+    "updatedAt": "2026-03-18"
+  },
+  "tokens": {
+    "colors": {
+      "bg": "#FDFBF7",
+      "surface": "#FFFFFF",
+      "text": {
+        "primary": "#1C1410",
+        "secondary": "#6B5B4E",
+        "muted": "#9C8878",
+        "white": "#FFFFFF"
+      },
+      "accent": {
+        "base": "#E4BA45",
+        "hover": "#D4A93A"
+      },
+      "border": {
+        "subtle": "#FAF3E1",
+        "headerBurger": "rgba(228, 186, 69, 0.35)",
+        "mobilePanel": "rgba(228, 186, 69, 0.28)"
+      },
+      "overlay": {
+        "backdrop": "rgba(28, 20, 16, 0.32)"
+      }
+    },
+    "typography": {
+      "fontFamilies": {
+        "heading": "Montserrat",
+        "body": "Inter",
+        "fallback": "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+      },
+      "fontWeights": {
+        "inter": {
+          "regular": 400,
+          "semibold": 600
+        },
+        "montserrat": {
+          "bold": 700
+        }
+      },
+      "styles": {
+        "h1": { "fontFamily": "Montserrat", "fontWeight": 700, "fontSize": 64, "lineHeight": 0.9 },
+        "h2": { "fontFamily": "Montserrat", "fontWeight": 700, "fontSize": 40, "lineHeight": 1.2 },
+        "heroSubtitle": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 18, "lineHeight": 1.4 },
+        "bodyM": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 16, "lineHeight": 22 },
+        "bodyS": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 14, "lineHeight": 17 },
+        "button": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 16, "lineHeight": 24 },
+        "trust": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 14, "lineHeight": 17 },
+        "advCardTitle": { "fontFamily": "Montserrat", "fontWeight": 700, "fontSize": 16, "lineHeight": 19 }
+      }
+    },
+    "layout": {
+      "container": {
+        "contentMax": 1178,
+        "headerMax": 1211,
+        "sidePadding": 24,
+        "sidePaddingMobile": 16,
+        "heroDesktopContainerPaddingX": 0
+      },
+      "breakpoints": {
+        "desktopMin": 1280,
+        "tabletLandscape": { "min": 1024, "max": 1279 },
+        "tabletPortrait": { "min": 768, "max": 1023 },
+        "mobileMax": 767
+      },
+      "spacing": {
+        "header": { "paddingTop": 28, "paddingBottom": 24, "scrolledPaddingTop": 18, "scrolledPaddingBottom": 16 },
+        "hero": { "paddingTop": 140, "paddingBottom": 96, "mobilePaddingTop": 60, "mobilePaddingBottom": 48 },
+        "advantages": { "paddingBottom": 96 },
+        "gaps": {
+          "heroColumns": 100,
+          "heroButtons": 20,
+          "headerNav": 32,
+          "advantagesGrid": 20
+        }
+      }
+    },
+    "radii": {
+      "pill": 61,
+      "card": 16,
+      "panel": 18,
+      "burger": 12,
+      "chip": 12
+    },
+    "shadows": {
+      "advCardHover": "0 14px 44px rgba(228, 186, 69, 0.18), 0 10px 28px rgba(28, 20, 16, 0.06)"
+    },
+    "motion": {
+      "durationsMs": {
+        "fast": 120,
+        "base": 160,
+        "slow": 180
+      },
+      "easings": {
+        "default": "ease",
+        "inOut": "ease-in-out"
+      },
+      "animations": {
+        "balloonsWind": { "duration": "5.6s", "timing": "ease-in-out", "iterationCount": "infinite" },
+        "prefersReducedMotion": true
+      }
+    },
+    "responsive": {
+      "header": {
+        "mobile": { "height": 60, "hide": ["nav", "phone", "cta"], "show": ["burger"] },
+        "tabletPortrait": { "hide": ["phone"], "navGap": 16, "navFontSize": 12 },
+        "scroll": { "addsBorderBottom": "#FAF3E1", "shrinksPadding": true }
+      },
+      "hero": {
+        "tabletPortrait": { "columns": 2, "gap": 32, "visualWidth": 320, "titleFontSize": 42 },
+        "mobile": {
+          "visual": "hidden",
+          "columns": 1,
+          "textAlign": "center",
+          "titleFontSize": 36,
+          "subtitleFontSize": 15,
+          "buttons": { "direction": "column", "minWidth": 280 },
+          "trustAlign": "center",
+          "verticalCenter": true
+        }
+      },
+      "advantages": {
+        "tabletLandscape": { "columns": 4, "cardPadding": { "y": 24, "x": 18 } },
+        "tabletPortrait": { "columns": 2, "sectionPaddingY": 64, "gap": 20 },
+        "mobile": { "columns": 1, "sectionPaddingY": 48, "gap": 16, "textAlign": "left" }
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "base": {
+        "height": 48,
+        "paddingX": 24,
+        "paddingY": 12,
+        "radius": 61,
+        "gap": 10
+      },
+      "variants": {
+        "primary": { "bg": "{colors.accent.base}", "text": "{colors.text.white}", "border": "{colors.accent.base}" },
+        "outline": { "bg": "transparent", "text": "{colors.text.primary}", "border": "{colors.accent.base}" }
+      },
+      "states": {
+        "hover": {
+          "primary": { "bg": "{colors.accent.hover}", "border": "{colors.accent.hover}" },
+          "outline": { "border": "{colors.accent.hover}", "iconShiftX": 4 }
+        },
+        "active": { "translateY": 1 }
+      }
+    },
+    "header": {
+      "positioning": {
+        "position": "fixed",
+        "top": 0,
+        "zIndex": 100000,
+        "background": "rgba(253, 251, 247, 0.92)",
+        "backdropBlurPx": 8
+      },
+      "scrollState": { "class": "is-scrolled", "borderBottomColor": "{tokens.colors.border.subtle}", "shrink": true },
+      "logo": { "width": 194 },
+      "nav": { "linkColor": "{colors.text.secondary}", "hoverColor": "{colors.text.primary}" },
+      "mobile": { "burgerVisibleAtOrBelow": "{tokens.layout.breakpoints.mobileMax}" }
+    },
+    "hero": {
+      "image": {
+        "size": { "width": 443, "height": 684 },
+        "windTransformOrigin": "50% 92%"
+      },
+      "desktop": {
+        "containerPaddingX": 0
+      }
+    },
+    "advantages": {
+      "innerMaxWidth": 869,
+      "card": {
+        "size": { "width": 186, "minHeight": 217 },
+        "padding": { "top": 32, "right": 24, "bottom": 32, "left": 24 },
+        "radius": 16,
+        "border": "{tokens.colors.border.subtle}",
+        "icon": { "size": 32 },
+        "hoverGlow": {
+          "radial": "radial-gradient(300px 220px at 30% 10%, rgba(228, 186, 69, 0.35), rgba(228, 186, 69, 0) 60%)"
+        }
+      }
+    }
+  }
+}
+
