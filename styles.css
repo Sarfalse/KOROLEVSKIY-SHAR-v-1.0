@@ -2190,48 +2190,68 @@ cursor: pointer;
 }
 
 @media (max-width: 767px) {
+  /* Модалка: центрируем с отступами от краёв */
   .order-modal {
-    padding: 18px 12px;
+    padding: 20px 12px;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Диалог растягивается на ширину, высота ограничена экраном */
   .order-modal__dialog {
     width: 100%;
     max-width: 100%;
-    max-height: calc(100% - 72px);
-    overflow-y: hidden;
+    /* сбрасываем жёсткие 708px, ставим высоту по экрану с отступами */
+    max-height: calc(100dvh - 40px);
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Белая карточка скроллируется внутри, если не влезает */
+  .order-modal__dialog .cta__form-wrap {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 14px 14px 16px;
+    border-radius: 18px;
   }
 
   .order-modal__close {
-    top: 14px;
-    right: 14px;
+    top: 10px;
+    right: 10px;
     width: 34px;
     height: 34px;
   }
 
-  /* Чтобы форма внутри модалки влезала без горизонтального скролла */
-  .order-modal__dialog .cta__form-wrap {
-    padding: 14px 12px 14px;
-  }
-
   .order-modal__dialog .cta__form-header {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .order-modal__dialog .cta__form {
-    gap: 12px;
+    gap: 10px;
   }
 
   .order-modal__dialog .cta__field {
     gap: 4px;
   }
 
+  .order-modal__dialog .cta__input,
+  .order-modal__dialog .cta__select {
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+
   .order-modal__dialog .cta__textarea {
-    min-height: 72px;
+    min-height: 60px;
+    font-size: 14px;
+    padding: 10px 14px;
   }
 
   .order-modal__dialog .cta__submit {
-    height: 48px;
-    padding: 0 20px;
+    height: 46px;
+    font-size: 15px;
     margin-top: 2px;
   }
 }
