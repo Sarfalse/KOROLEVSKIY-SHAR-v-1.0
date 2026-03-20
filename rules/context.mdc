@@ -41,6 +41,34 @@
       {
         "id": "advantages",
         "description": "Заголовок+подзаголовок, 4 карточки 186×217, hover-свечение на карточках."
+      },
+      {
+        "id": "process",
+        "description": "Блок 'Как проходит заказ' (4 шага), горизонтальный/вертикальный рельс и анимация прорисовки линии на мобильном."
+      },
+      {
+        "id": "quiz",
+        "description": "Квиз (мультишаговый): фото-опции на шагах 1–2, чек-лист выбора, прогресс-бар 'Шаг X из 5', валидация контактов, success-экран."
+      },
+      {
+        "id": "reviews",
+        "description": "Блок 'Отзывы' (заголовок + рейтинг + 3 скриншота) и lightbox-модальное окно просмотра крупно."
+      },
+      {
+        "id": "about",
+        "description": "Блок 'О мастере' (фото Ирины + текст + статистика 500+/4.9★/5 лет) на белом фоне."
+      },
+      {
+        "id": "cta",
+        "description": "CTA 'Оставить заявку' на тёмном фоне: соцсети слева, белая форма справа, отправка и success-экран."
+      },
+      {
+        "id": "order-modals",
+        "description": "Модалки заявки по кнопкам 'Обсудить заказ' и 'Хочу такую' (дата мероприятия + интерес/название карточки)."
+      },
+      {
+        "id": "footer",
+        "description": "Футер на самом тёмном фоне: лого, слоган, соцсети, дублирование навигации, телефон/почта, политика (без страницы), разработка Kazankov Studio."
       }
     ],
     "assetsExported": {
@@ -53,7 +81,21 @@
         "assets/icons/advantages/balloon.svg",
         "assets/icons/advantages/delivery.svg"
       ],
-      "images": ["assets/hero/hero-balloons.png"]
+      "images": [
+        "assets/hero/hero-balloons.png",
+        "assets/img/irina.jpg",
+        "assets/review/review-1.png",
+        "assets/review/review-2.png",
+        "assets/review/review-3.png",
+        "assets/quiz/photo-zone.jpg",
+        "assets/quiz/decor.jpg",
+        "assets/quiz/holiday.jpg",
+        "assets/quiz/birthday.jpg",
+        "assets/quiz/corporate event.jpg",
+        "assets/quiz/marry.jpg",
+        "assets/quiz/gender party.jpg",
+        "assets/quiz/surprise.jpg"
+      ]
     }
   },
   "codingConventions": {
@@ -82,8 +124,8 @@
     ]
   },
   "nextSteps": [
-    "Продолжить верстку следующими блоками из Figma (портфолио, каталог, отзывы, контакты, форма заказа).",
-    "Добавить реальный контент/ссылки и заполнить якорные секции.",
+    "Финализировать оставшиеся блоки из Figma (каталог/портфолио/контакты/форма заказа) и связать навигацию с реальным контентом.",
+    "Заменить заглушки `href='#'` на реальные страницы/анкоры для политики конфиденциальности.",
     "Опционально: подключить сборку (vite) и оптимизацию ассетов, если потребуется."
   ]
 }
