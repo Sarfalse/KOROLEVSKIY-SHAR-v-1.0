@@ -2198,7 +2198,7 @@ cursor: pointer;
     width: 100%;
     max-width: 100%;
     max-height: calc(100% - 72px);
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 
   .order-modal__close {
@@ -2210,7 +2210,29 @@ cursor: pointer;
 
   /* Чтобы форма внутри модалки влезала без горизонтального скролла */
   .order-modal__dialog .cta__form-wrap {
-    padding: 18px 14px 20px;
+    padding: 14px 12px 14px;
+  }
+
+  .order-modal__dialog .cta__form-header {
+    margin-bottom: 16px;
+  }
+
+  .order-modal__dialog .cta__form {
+    gap: 12px;
+  }
+
+  .order-modal__dialog .cta__field {
+    gap: 4px;
+  }
+
+  .order-modal__dialog .cta__textarea {
+    min-height: 72px;
+  }
+
+  .order-modal__dialog .cta__submit {
+    height: 48px;
+    padding: 0 20px;
+    margin-top: 2px;
   }
 }
 
