@@ -2175,6 +2175,11 @@ cursor: pointer;
   background: rgba(212, 169, 58, 0.35);
 }
 
+.order-modal__close:focus,
+.order-modal__close:focus-visible {
+  outline: none;
+}
+
 .modal-close {
   font-size: 18px;
 }
