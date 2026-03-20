@@ -273,8 +273,16 @@ catalogMoreBtn?.addEventListener("click", () => {
   const dateDisp  = document.getElementById("quiz-date-display");
 
   if (dateOpt && dateInput) {
-    // Prevent date input click from bubbling to option
-    dateInput.addEventListener("click", (e) => e.stopPropagation());
+    // On mobile the hidden input covers the whole option area.
+    // Open native date picker here, then prevent bubbling.
+    dateInput.addEventListener("click", (e) => {
+      e.stopPropagation();
+      try {
+        dateInput.showPicker();
+      } catch (_) {
+        dateInput.focus();
+      }
+    });
 
     // Clicking the option opens the date picker
     dateOpt.addEventListener("click", () => {
