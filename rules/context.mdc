@@ -1,12 +1,12 @@
 {
   "project": {
     "name": "Королевский шар",
-    "type": "Landing page",
+    "type": "Лендинг + отдельная страница политики",
     "business": "Студия по оформлению шарами (Курск)",
-    "goal": "Сверстать лендинг по Figma блоками (pixel-close), с хорошим UX и адаптивом. Подготовить структуру под дальнейшее наполнение разделов и конверсию (каталог/портфолио/отзывы/контакты/заказ)."
+    "goal": "Лендинг с каталогом из Google Sheets, квизом, отзывами, доверие клиентов (логотипы), контактами и юр. данными; единая розово-фиолетовая палитра."
   },
   "sourceOfTruth": {
-    "design": "Figma",
+    "design": "Figma (базовые экраны) + эволюция в коде (цвета/блоки см. design-system.mdc)",
     "figmaFileName": "Королевский Шар",
     "links": {
       "file": "https://www.figma.com/design/7LphyuOaQEZIF4yqMFaqqD/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-%D0%A8%D0%B0%D1%80",
@@ -19,114 +19,89 @@
   },
   "stack": {
     "frontend": ["HTML", "CSS", "JavaScript"],
-    "assets": "SVG/PNG exported from Figma",
+    "assets": "PNG/SVG; каталог — картинки часто с Google Drive (thumbnail URL)",
     "notes": [
-      "Без сборщика и фреймворков на текущем этапе.",
-      "Шрифты подключаются через Google Fonts (Montserrat, Inter)."
+      "Без сборщика: статические файлы, локально удобно поднимать python -m http.server (избегать file:// из-за fetch каталога/CORS).",
+      "Шрифты: Google Fonts — Montserrat, Inter."
     ]
   },
+  "pages": {
+    "index.html": "Главная: все секции лендинга, модалки заказа, динамический каталог, cookie-баннер.",
+    "privacy.html": "Политика конфиденциальности; те же header/footer паттерны, ссылки на якоря index.html."
+  },
+  "contactsAndLegals": {
+    "phone": "+7 999 609-15-10",
+    "email": "Irishkaskorova@gmail.com",
+    "social": {
+      "vk": "https://vk.com/irishkin_sharik",
+      "telegram": "https://t.me/IrishkaSk15",
+      "max": "https://max.ru/u/f9LHodD0cOLvgBHjp9xeVZrOtt4Y-TFF7keS7iDaWhk1gXdK15sl3KG1Tik"
+    },
+    "address": {
+      "label": "ул. Студенческая 1, Европа-40, этаж 1",
+      "mapsUrl": "https://yandex.com.tr/maps/-/CPbZeQjc"
+    },
+    "legalEntity": {
+      "name": "ИП Орлова Ирина Андреевна",
+      "inn": "463225468106",
+      "ogrnip": "323460000022294"
+    },
+    "privacyUrl": "./privacy.html"
+  },
+  "catalog": {
+    "dataSource": "Google Sheets (публикуемый CSV)",
+    "csvUrlEnv": "Константа CSV_URL в конце index.html (обновлять при смене таблицы)",
+    "behavior": [
+      "Только строки active=TRUE",
+      "is_hit: колонка или category=hit",
+      "Ссылки Google Drive file/d/… → thumbnail?id=…&sz=w1000 в toDirectImageUrl",
+      "Фильтры и «Показать еще»: по 6 карточек; когда всё показано — кнопка «Работы показаны»"
+    ]
+  },
+  "cookieConsent": {
+    "storageKey": "korolevshar_cookie_consent_v1",
+    "implementation": "script.js initCookieBanner; разметка #cookie-banner на index и privacy",
+    "ux": "Компактная карточка: десктоп — правый нижний угол; мобилка ≤767px — снизу по центру"
+  },
   "implementationState": {
-    "pages": ["index.html"],
     "styles": ["styles.css"],
-    "scripts": ["script.js"],
+    "scripts": ["script.js", "встроенный скрипт каталога в index.html"],
     "implementedSections": [
-      {
-        "id": "header",
-        "description": "Лого (SVG), навигация, телефон, CTA. На мобильных — бургер и панель меню."
-      },
-      {
-        "id": "hero",
-        "description": "Заголовок в 2 строки, подзаголовок, 2 CTA-кнопки, trust-line, изображение шаров с анимацией 'ветра'."
-      },
-      {
-        "id": "advantages",
-        "description": "Заголовок+подзаголовок, 4 карточки 186×217, hover-свечение на карточках."
-      },
-      {
-        "id": "process",
-        "description": "Блок 'Как проходит заказ' (4 шага), горизонтальный/вертикальный рельс и анимация прорисовки линии на мобильном."
-      },
-      {
-        "id": "quiz",
-        "description": "Квиз (мультишаговый): фото-опции на шагах 1–2, чек-лист выбора, прогресс-бар 'Шаг X из 5', валидация контактов, success-экран."
-      },
-      {
-        "id": "reviews",
-        "description": "Блок 'Отзывы' (заголовок + рейтинг + 3 скриншота) и lightbox-модальное окно просмотра крупно."
-      },
-      {
-        "id": "about",
-        "description": "Блок 'О мастере' (фото Ирины + текст + статистика 500+/4.9★/5 лет) на белом фоне."
-      },
-      {
-        "id": "cta",
-        "description": "CTA 'Оставить заявку' на тёмном фоне: соцсети слева, белая форма справа, отправка и success-экран."
-      },
-      {
-        "id": "order-modals",
-        "description": "Модалки заявки по кнопкам 'Обсудить заказ' и 'Хочу такую' (дата мероприятия + интерес/название карточки)."
-      },
-      {
-        "id": "footer",
-        "description": "Футер на самом тёмном фоне: лого, слоган, соцсети, дублирование навигации, телефон/почта, политика (без страницы), разработка Kazankov Studio."
-      }
+      { "id": "header", "description": "Фиксированная шапка, лого PNG, бургер, навигация." },
+      { "id": "hero", "description": "Герой-блок с CTA и анимацией шаров." },
+      { "id": "catalog", "description": "Каталог из Google Sheets: фильтры, пагинация, скелетоны, модалка «Хочу такую»." },
+      { "id": "trust", "description": "«Нам доверяют»: сетка логотипов (6 / 3×2 на мобилке)." },
+      { "id": "advantages", "description": "Карточки преимуществ, hover в новой палитре." },
+      { "id": "process", "description": "Этапы заказа; рельс в розовых тонах." },
+      { "id": "quiz", "description": "Многошаговый квиз; картинки в assets/quiz (в т.ч. corporate event.jpg, gender party.jpg)." },
+      { "id": "reviews", "description": "Скриншоты отзывов; карточки 16:9; изображения contain; lightbox." },
+      { "id": "about", "description": "О мастере, фото irina.jpg." },
+      { "id": "cta", "description": "Заявка, соцсети, форма." },
+      { "id": "order-modals", "description": "Модалки заказа и интереса к карточке." },
+      { "id": "footer", "description": "Тёмный фон, контакты с адресом, MAX/VK/Telegram, юрблок, ссылка на privacy." },
+      { "id": "cookie-banner", "description": "Согласие на cookie + ссылка на политику." }
     ],
-    "assetsExported": {
-      "figmaScreens": ["assets/figma/hero.png", "assets/figma/header.png", "assets/figma/advantages.png"],
-      "brand": ["assets/brand/logo.svg"],
-      "icons": [
-        "assets/icons/phone.svg",
-        "assets/icons/advantages/design.svg",
-        "assets/icons/advantages/key.svg",
-        "assets/icons/advantages/balloon.svg",
-        "assets/icons/advantages/delivery.svg"
-      ],
-      "images": [
-        "assets/hero/hero-balloons.png",
-        "assets/img/irina.jpg",
-        "assets/review/review-1.png",
-        "assets/review/review-2.png",
-        "assets/review/review-3.png",
-        "assets/quiz/photo-zone.jpg",
-        "assets/quiz/decor.jpg",
-        "assets/quiz/holiday.jpg",
-        "assets/quiz/birthday.jpg",
-        "assets/quiz/corporate event.jpg",
-        "assets/quiz/marry.jpg",
-        "assets/quiz/gender party.jpg",
-        "assets/quiz/surprise.jpg"
-      ]
-    }
+    "assetsNote": "В репозитории набор ассетов может меняться (лого/фавикон PNG, quiz JPG с пробелами в имени и т.д.). Актуальные пути смотреть в index.html и папке assets/."
   },
   "codingConventions": {
     "naming": {
-      "css": "BEM-like classes (block__element, modifiers with --)",
-      "sections": "Each major block has its own block class (e.g. .hero, .advantages)."
+      "css": "BEM-like (block__element, --modifier)",
+      "sections": "Каждый блок — свой класс (.hero, .quiz, …)"
     },
     "responsive": {
       "breakpoints": {
-        "desktop": "1280px+",
-        "tabletLandscape": "1024px–1279px",
-        "tabletPortrait": "768px–1023px",
         "mobile": "≤767px"
       },
-      "approach": "Desktop-first; media queries in the end of styles.css as one block; desktop (1280px+) is the reference."
+      "approach": "Desktop-first; медиазапросы в styles.css"
     },
     "accessibility": [
-      "Use semantic tags (header/nav/main/section).",
-      "Provide aria-label where needed.",
-      "Respect prefers-reduced-motion for animations."
-    ],
-    "behavior": [
-      "Smooth scrolling for anchor links.",
-      "Mobile menu closes by backdrop click / Esc / link click.",
-      "Header is fixed to top on all breakpoints; on scroll it adds bottom border and slightly shrinks in height (padding/logo)."
+      "Семантика, aria-label где нужно",
+      "prefers-reduced-motion для тяжёлых анимаций",
+      "Cookie-баннер: role=dialog, aria-live, скрытие через hidden + inert"
     ]
   },
   "nextSteps": [
-    "Финализировать оставшиеся блоки из Figma (каталог/портфолио/контакты/форма заказа) и связать навигацию с реальным контентом.",
-    "Заменить заглушки `href='#'` на реальные страницы/анкоры для политики конфиденциальности.",
-    "Опционально: подключить сборку (vite) и оптимизацию ассетов, если потребуется."
+    "По желанию: полностью убрать остатки золотых rgba в .reviews__item в пользу accent-палитры.",
+    "По желанию: единый источник CSV URL (конфиг) без дублирования в HTML."
   ]
 }
-

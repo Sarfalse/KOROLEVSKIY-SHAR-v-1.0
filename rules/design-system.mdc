@@ -1,31 +1,52 @@
 {
   "meta": {
     "project": "Королевский шар",
-    "source": "Current HTML/CSS implementation + Figma local styles",
-    "updatedAt": "2026-03-20"
+    "source": "Текущая реализация HTML/CSS (styles.css :root и секции) + история из Figma",
+    "updatedAt": "2026-04-02",
+    "note": "Палитра и акценты переведены на розово-фиолетовую тему (не коричнево-золотую скрин-MVP)."
   },
   "tokens": {
     "colors": {
-      "bg": "#FDFBF7",
+      "cssVariables": {
+        "bg": "#FDF8FC",
+        "text": "#2D1A28",
+        "textSecondary": "#7A4E6E",
+        "textMuted": "#9C7090",
+        "accent": "#C45C9E",
+        "accentHover": "#A8417F",
+        "containerMaxPx": 1178
+      },
+      "sections": {
+        "quiz": {
+          "background": "linear-gradient(155deg, #1a0f18 0%, #251322 52%, #150e14 100%)",
+          "overlayRadial": [
+            "rgba(196, 92, 158, 0.14)",
+            "rgba(122, 78, 110, 0.12)"
+          ]
+        },
+        "cta": {
+          "background": "linear-gradient(155deg, #1a0f18 0%, #251322 52%, #150e14 100%)",
+          "overlayRadial": [
+            "rgba(196, 92, 158, 0.11)",
+            "rgba(168, 65, 127, 0.09)"
+          ]
+        },
+        "footer": {
+          "background": "#0e090f"
+        },
+        "trust": {
+          "background": "#FFFFFF"
+        }
+      },
       "surface": "#FFFFFF",
-      "ctaBgTop": "#1C1410",
-      "ctaBgMid": "#271A12",
-      "ctaBgBottom": "#1E1209",
-      "footerBg": "#110D09",
-      "text": {
-        "primary": "#1C1410",
-        "secondary": "#6B5B4E",
-        "muted": "#9C8878",
+      "textExtended": {
         "white": "#FFFFFF"
       },
-      "accent": {
-        "base": "#E4BA45",
-        "hover": "#D4A93A"
-      },
+      "accentLegacyNote": "В отдельных местах ещё могут встречаться rgba(228,186,69,…) в бордерах/тенях (например .reviews__item) — при полной унификации заменить на розово-фиолетовые аналоги.",
       "border": {
-        "subtle": "#FAF3E1",
-        "headerBurger": "rgba(228, 186, 69, 0.35)",
-        "mobilePanel": "rgba(228, 186, 69, 0.28)"
+        "accentSoft": "rgba(196, 92, 158, 0.18)",
+        "accentMedium": "rgba(196, 92, 158, 0.28)",
+        "quizOption": "rgba(196, 92, 158, 0.2)"
       },
       "overlay": {
         "backdrop": "rgba(28, 20, 16, 0.32)",
@@ -40,13 +61,8 @@
         "fallback": "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
       },
       "fontWeights": {
-        "inter": {
-          "regular": 400,
-          "semibold": 600
-        },
-        "montserrat": {
-          "bold": 700
-        }
+        "inter": { "regular": 400, "semibold": 600 },
+        "montserrat": { "bold": 700 }
       },
       "styles": {
         "h1": { "fontFamily": "Montserrat", "fontWeight": 700, "fontSize": 64, "lineHeight": 0.9 },
@@ -55,8 +71,8 @@
         "bodyM": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 16, "lineHeight": 22 },
         "bodyS": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 14, "lineHeight": 17 },
         "button": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 16, "lineHeight": 24 },
-        "trust": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 14, "lineHeight": 17 },
-        "advCardTitle": { "fontFamily": "Montserrat", "fontWeight": 700, "fontSize": 16, "lineHeight": 19 }
+        "cookieBannerTitle": { "fontFamily": "Montserrat", "fontWeight": 700, "fontSize": 13, "lineHeight": 1.25 },
+        "cookieBannerText": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 12, "lineHeight": 1.45 }
       }
     },
     "layout": {
@@ -64,25 +80,13 @@
         "contentMax": 1178,
         "headerMax": 1211,
         "sidePadding": 24,
-        "sidePaddingMobile": 16,
-        "heroDesktopContainerPaddingX": 0
+        "sidePaddingMobile": 16
       },
       "breakpoints": {
         "desktopMin": 1280,
         "tabletLandscape": { "min": 1024, "max": 1279 },
         "tabletPortrait": { "min": 768, "max": 1023 },
         "mobileMax": 767
-      },
-      "spacing": {
-        "header": { "paddingTop": 28, "paddingBottom": 24, "scrolledPaddingTop": 18, "scrolledPaddingBottom": 16 },
-        "hero": { "paddingTop": 140, "paddingBottom": 96, "mobilePaddingTop": 60, "mobilePaddingBottom": 48 },
-        "advantages": { "paddingBottom": 96 },
-        "gaps": {
-          "heroColumns": 100,
-          "heroButtons": 20,
-          "headerNav": 32,
-          "advantagesGrid": 20
-        }
       }
     },
     "radii": {
@@ -90,170 +94,111 @@
       "card": 16,
       "panel": 18,
       "burger": 12,
-      "chip": 12
+      "chip": 12,
+      "cookieBanner": 14
     },
     "shadows": {
-      "advCardHover": "0 14px 44px rgba(228, 186, 69, 0.18), 0 10px 28px rgba(28, 20, 16, 0.06)",
+      "advCardHover": "0 14px 44px rgba(196, 92, 158, 0.2), 0 10px 28px rgba(28, 20, 16, 0.06)",
       "reviewsItem": "0 4px 24px rgba(28, 20, 16, 0.08)",
-      "reviewsLightboxDialog": "0 28px 80px rgba(0, 0, 0, 0.6)"
+      "reviewsLightboxDialog": "0 28px 80px rgba(0, 0, 0, 0.6)",
+      "cookieBanner": "0 12px 36px rgba(45, 26, 40, 0.14)"
+    },
+    "zIndex": {
+      "header": 100000,
+      "cookieBanner": 120000,
+      "reviewsLightboxAndModalsOrder": 200000
     },
     "motion": {
-      "durationsMs": {
-        "fast": 120,
-        "base": 160,
-        "slow": 180
-      },
-      "easings": {
-        "default": "ease",
-        "inOut": "ease-in-out"
-      },
+      "durationsMs": { "fast": 120, "base": 160, "slow": 180 },
       "animations": {
-        "balloonsWind": { "duration": "5.6s", "timing": "ease-in-out", "iterationCount": "infinite" },
-        "quizCardAppear": "600ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         "quizStepSlideIn": "320ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         "reviewsLightboxIn": "260ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         "prefersReducedMotion": true
       }
-    },
-    "responsive": {
-      "header": {
-        "mobile": { "height": 60, "hide": ["nav", "phone", "cta"], "show": ["burger"] },
-        "tabletPortrait": { "hide": ["phone"], "navGap": 16, "navFontSize": 12 },
-        "scroll": { "addsBorderBottom": "#FAF3E1", "shrinksPadding": true }
-      },
-      "hero": {
-        "tabletPortrait": { "columns": 2, "gap": 32, "visualWidth": 320, "titleFontSize": 42 },
-        "mobile": {
-          "visual": "hidden",
-          "columns": 1,
-          "textAlign": "center",
-          "titleFontSize": 36,
-          "subtitleFontSize": 15,
-          "buttons": { "direction": "column", "minWidth": 280 },
-          "trustAlign": "center",
-          "verticalCenter": true
-        }
-      },
-      "advantages": {
-        "tabletLandscape": { "columns": 4, "cardPadding": { "y": 24, "x": 18 } },
-        "tabletPortrait": { "columns": 2, "sectionPaddingY": 64, "gap": 20 },
-        "mobile": { "columns": 1, "sectionPaddingY": 48, "gap": 16, "textAlign": "left" }
-      }
     }
   },
   "components": {
-    "button": {
-      "base": {
-        "height": 48,
-        "paddingX": 24,
-        "paddingY": 12,
-        "radius": 61,
-        "gap": 10
-      },
-      "variants": {
-        "primary": { "bg": "{colors.accent.base}", "text": "{colors.text.white}", "border": "{colors.accent.base}" },
-        "outline": { "bg": "transparent", "text": "{colors.text.primary}", "border": "{colors.accent.base}" }
-      },
-      "states": {
-        "hover": {
-          "primary": { "bg": "{colors.accent.hover}", "border": "{colors.accent.hover}" },
-          "outline": { "border": "{colors.accent.hover}", "iconShiftX": 4 }
-        },
-        "active": { "translateY": 1 }
-      }
-    },
     "header": {
       "positioning": {
-        "position": "fixed",
-        "top": 0,
-        "zIndex": 100000,
-        "background": "rgba(253, 251, 247, 0.92)",
+        "zIndex": "{zIndex.header}",
+        "background": "rgba(253, 247, 252, 0.92)",
         "backdropBlurPx": 8
       },
-      "scrollState": { "class": "is-scrolled", "borderBottomColor": "{tokens.colors.border.subtle}", "shrink": true },
-      "logo": { "width": 194 },
-      "nav": { "linkColor": "{colors.text.secondary}", "hoverColor": "{colors.text.primary}" },
-      "mobile": { "burgerVisibleAtOrBelow": "{tokens.layout.breakpoints.mobileMax}" }
-    },
-    "hero": {
-      "image": {
-        "size": { "width": 443, "height": 684 },
-        "windTransformOrigin": "50% 92%"
+      "logo": {
+        "file": "assets/brand/logo.png",
+        "desktop": { "width": 81, "height": 63 },
+        "mobile": { "width": 65, "height": 50 }
       },
-      "desktop": {
-        "containerPaddingX": 0
+      "burger": {
+        "accentBorderRgba": "rgba(196, 92, 158, 0.35)"
       }
     },
     "advantages": {
-      "innerMaxWidth": 869,
       "card": {
-        "size": { "width": 186, "minHeight": 217 },
-        "padding": { "top": 32, "right": 24, "bottom": 32, "left": 24 },
-        "radius": 16,
-        "border": "{tokens.colors.border.subtle}",
-        "icon": { "size": 32 },
         "hoverGlow": {
-          "radial": "radial-gradient(300px 220px at 30% 10%, rgba(228, 186, 69, 0.35), rgba(228, 186, 69, 0) 60%)"
+          "radial": "radial-gradient(300px 220px at 30% 10%, rgba(196, 92, 158, 0.28), rgba(196, 92, 158, 0) 60%)"
         }
       }
     },
     "process": {
-      "sectionPaddingY": 96,
-      "titleSizeDesktop": 40,
-      "railLineColor": "rgba(228, 186, 69, 0.18)",
-      "stepNumSizeDesktop": 64,
-      "stepNumBorderWidth": 2
+      "railLineColor": "rgba(196, 92, 158, 0.22)"
     },
-    "quiz": {
-      "sectionPaddingY": 96,
-      "cardRadius": 28,
-      "cardPaddingDesktop": { "top": 48, "x": 56 },
-      "photoOptions": {
-        "aspectRatioDesktop": "4 / 3",
-        "mobileOptionImageSize": 80,
-        "mobileOptionBorderRadius": 14
-      },
-      "progress": {
-        "labelFormat": "Шаг X из 5",
-        "stepsTotal": 6,
-        "displaySteps": 5
-      }
+    "catalog": {
+      "dynamicData": "Google Sheets → публикуемый CSV; клиентский fetch, фильтры, пагинация по 6, скелетоны/ошибка",
+      "priceFormat": "Число + « ₽», без приставки «от»",
+      "imagePlaceholders": "class catalog-img-ph, переменная --bg для фона"
     },
-    "about": {
-      "sectionPaddingY": 96,
-      "gridColumnsDesktop": "480px 1fr",
-      "photoRadius": 24,
-      "photoBgRadius": "60% 40% 55% 45% / 50% 50% 50% 50%"
-    },
-    "cta": {
-      "sectionPaddingY": 96,
-      "cardRadius": 24,
-      "submitHeight": 52,
-      "submitRadius": 61,
-      "consentCheckbox": { "size": 18 }
+    "trust": {
+      "title": "Нам доверяют",
+      "desktop": { "gridColumns": 6, "logoHeightPx": 65 },
+      "mobile": { "gridColumns": 3, "logoHeightPx": 44 },
+      "logoStyle": "grayscale + saturate(0), hover opacity 0.7→1"
     },
     "reviews": {
-      "sectionPaddingY": 96,
       "gridColumnsDesktop": 3,
-      "itemRadiusDesktop": 20,
-      "itemRadiusMobile": 14,
+      "item": {
+        "aspectRatio": "16 / 9",
+        "screenshot": {
+          "objectFit": "contain",
+          "background": "{tokens.colors.cssVariables.bg}"
+        }
+      },
       "lightbox": {
         "backdrop": "{tokens.colors.overlay.reviewsLightboxBackdrop}",
         "dialogMaxWidth": 960,
         "dialogRadius": 24
       }
     },
-    "orderModals": {
-      "dialogSize": { "width": 440, "height": 708 },
-      "backdrop": "{tokens.colors.overlay.orderModalBackdrop}",
-      "closeButtonSize": 36
+    "cookieBanner": {
+      "id": "cookie-banner",
+      "role": "dialog",
+      "placement": {
+        "desktop": "fixed, правый нижний угол (right 12px), width max 320px",
+        "mobileMax767": "fixed, снизу по центру (left 50%, translateX(-50%)), width max 340px / 100vw-24px"
+      },
+      "styling": {
+        "glass": "backdrop-filter blur(10px), border rgba(196,92,158,0.28)",
+        "bodyClassWhenVisible": "has-cookie-banner",
+        "storageKey": "korolevshar_cookie_consent_v1"
+      },
+      "focus": {
+        "primaryButtonNoSystemBlackRing": true,
+        "focusVisible": "box-shadow 2px rgba(196,92,158,0.55)"
+      }
     },
+    "quiz": {
+      "photoOptions": { "aspectRatio": "4 / 3" },
+      "progress": { "labelFormat": "Шаг X из 5", "stepsTotal": 6, "displaySteps": 5 }
+    },
+    "cta": { "submitHeight": 52, "submitRadius": 61 },
     "footer": {
-      "background": "{tokens.colors.footerBg}",
-      "topGridColumnsDesktop": "1.4fr 1fr 1fr",
-      "socialButtonSize": 38,
-      "privacyLink": { "textDecoration": "underline" }
+      "background": "{tokens.colors.sections.footer.background}",
+      "legalBlock": "ИП, ИНН, ОГРНИП; копирайт под юрблоком"
+    },
+    "button": {
+      "variants": {
+        "primary": { "bg": "{tokens.colors.cssVariables.accent}", "hover": "{tokens.colors.cssVariables.accentHover}" }
+      }
     }
   }
 }
-

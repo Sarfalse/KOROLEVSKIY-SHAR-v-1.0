@@ -17,7 +17,7 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="./assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/brand/favicon.png" type="image/png+xml" />
 
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./script.js"></script>
@@ -28,10 +28,10 @@
       <div class="header__container">
         <a class="header__logo" href="#top" aria-label="Королевский шар — на главную">
           <img
-            src="./assets/brand/logo.svg"
+            src="./assets/brand/logo.png"
             alt="Королевский шар"
-            width="194"
-            height="38"
+            width="81"
+            height="63"
             decoding="async"
           />
         </a>
@@ -43,7 +43,7 @@
           <a class="header__link" href="#contacts">Контакты</a>
         </nav>
 
-        <a class="header__phone" href="tel:+79202702531" aria-label="Позвонить +7 (920) 270-25-31">
+        <a class="header__phone" href="tel:+79996091510" aria-label="Позвонить +7 999 609-15-10">
           <img
             class="header__phone-icon"
             src="./assets/icons/phone.svg"
@@ -52,7 +52,7 @@
             height="18"
             decoding="async"
           />
-          <span class="header__phone-text">+7 (920) 270-25-31</span>
+          <span class="header__phone-text">+7 999 609-15-10</span>
         </a>
 
         <a class="btn btn--primary header__cta" href="#order">Обсудить заказ</a>
@@ -77,9 +77,9 @@
             <a class="mobile-menu__link" href="#contacts">Контакты</a>
           </nav>
 
-          <a class="mobile-menu__phone" href="tel:+79202702531">
+          <a class="mobile-menu__phone" href="tel:+79996091510">
             <img src="./assets/icons/phone.svg" alt="" width="18" height="18" />
-            <span>+7 (920) 270-25-31</span>
+            <span>+7 999 609-15-10</span>
           </a>
 
           <a class="btn btn--primary mobile-menu__cta" href="#order">Обсудить заказ</a>
@@ -287,7 +287,7 @@
             </button>
           </div>
 
-          <div class="catalog__grid">
+          <div class="catalog__grid" id="catalogGrid">
             <article class="catalog-card" data-category="birthday" data-reveal>
               <span class="catalog-card__badge">День рождения</span>
               <img
@@ -305,7 +305,7 @@
                   Стеклянный шар «Гигант» с индивидуальной надписью
                 </p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 3 000 ₽</div>
+                  <div class="catalog-card__price">3 000 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -330,7 +330,7 @@
                   Нежная арка в розово-белых тонах для девочек
                 </p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 2 500 ₽</div>
+                  <div class="catalog-card__price">2 500 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -351,7 +351,7 @@
                 <h3 class="catalog-card__title">Сет на выписку</h3>
                 <p class="catalog-card__text">Отличный подарок для своей любимой</p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 3 700 ₽</div>
+                  <div class="catalog-card__price">3 700 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -372,7 +372,7 @@
                 <h3 class="catalog-card__title">Сет «Кошечки»</h3>
                 <p class="catalog-card__text">Нежный сет для маленькой принцессы</p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 2 300 ₽</div>
+                  <div class="catalog-card__price">2 300 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -395,7 +395,7 @@
                   Внутри большого шара сердце с новой фамилией!
                 </p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 2 500 ₽</div>
+                  <div class="catalog-card__price">2 500 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -418,7 +418,7 @@
                 <h3 class="catalog-card__title">Сет «Любовь»</h3>
                 <p class="catalog-card__text">Яркое дополнение вашего праздника</p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 4 000 ₽</div>
+                  <div class="catalog-card__price">4 000 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -444,7 +444,7 @@
                 <h3 class="catalog-card__title">Сет «Кошечки»</h3>
                 <p class="catalog-card__text">Нежный сет для маленькой принцессы</p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 2 300 ₽</div>
+                  <div class="catalog-card__price">2 300 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -472,7 +472,7 @@
                 <h3 class="catalog-card__title">Сет «Любовь»</h3>
                 <p class="catalog-card__text">Яркое дополнение вашего праздника</p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 4 000 ₽</div>
+                  <div class="catalog-card__price">4 000 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -498,7 +498,7 @@
                 <h3 class="catalog-card__title">Сет на выписку</h3>
                 <p class="catalog-card__text">Отличный подарок для своей любимой</p>
                 <div class="catalog-card__bottom">
-                  <div class="catalog-card__price">от 3 700 ₽</div>
+                  <div class="catalog-card__price">3 700 ₽</div>
                   <a class="btn btn--primary btn--sm" href="#order">Хочу такую</a>
                 </div>
               </div>
@@ -509,6 +509,39 @@
             <button id="catalog-more" class="btn btn--ghost" type="button">
               Показать еще работы
             </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== НАМ ДОВЕРЯЮТ ===== -->
+      <section class="trust" aria-label="Нам доверяют">
+        <div class="container">
+          <header class="trust__header" data-reveal>
+            <h2 class="trust__title">Нам доверяют</h2>
+            <p class="trust__subtitle">Оформляли праздники для частных клиентов и компаний</p>
+          </header>
+
+          <div class="trust__scroller" aria-label="Логотипы клиентов и компаний" data-reveal>
+            <ul class="trust__list" aria-label="Логотипы партнёров">
+              <li class="trust__item">
+                <img class="trust__logo" src="./assets/trust/Group%209.png" alt="Логотип партнёра 1" loading="lazy" decoding="async" />
+              </li>
+              <li class="trust__item">
+                <img class="trust__logo" src="./assets/trust/Group%2010.png" alt="Логотип партнёра 2" loading="lazy" decoding="async" />
+              </li>
+              <li class="trust__item">
+                <img class="trust__logo" src="./assets/trust/Group%2011.png" alt="Логотип партнёра 3" loading="lazy" decoding="async" />
+              </li>
+              <li class="trust__item">
+                <img class="trust__logo" src="./assets/trust/Group%2012.png" alt="Логотип партнёра 4" loading="lazy" decoding="async" />
+              </li>
+              <li class="trust__item">
+                <img class="trust__logo" src="./assets/trust/YMcSjuHC7pRY8HPZTCsYS58HBQqKqUJc3gqtFvCSsL4c5FlnHf08LU2UNGfEZZ4BZDTX3TLM2CZkl94rTxkat3py%201.png" alt="Логотип партнёра 5" loading="lazy" decoding="async" />
+              </li>
+              <li class="trust__item">
+                <img class="trust__logo" src="./assets/trust/%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%A5%D0%9E%D0%A7%D0%A3%203%20%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC%20%D1%81%20%D1%84%D0%BE%D0%BD%D0%BE%D0%BC%201.png" alt="Логотип партнёра 6" loading="lazy" decoding="async" />
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -654,7 +687,7 @@
                     <span class="quiz__option-img quiz__option-img--corporate" aria-hidden="true">
                       <img
                         class="quiz__option-img-photo"
-                        src="./assets/quiz/corporate%20event.jpg"
+                        src="./assets/quiz/corporate-event.jpg"
                         alt=""
                         loading="lazy"
                         decoding="async"
@@ -678,7 +711,7 @@
                     <span class="quiz__option-img quiz__option-img--gender" aria-hidden="true">
                       <img
                         class="quiz__option-img-photo"
-                        src="./assets/quiz/gender%20party.jpg"
+                        src="./assets/quiz/gender-party.jpg"
                         alt=""
                         loading="lazy"
                         decoding="async"
@@ -706,15 +739,15 @@
                 <p class="quiz__question">На какой бюджет рассчитываете?</p>
                 <div class="quiz__options quiz__options--list">
                   <button class="quiz__option" data-value="budget-low" type="button">
-                    <span class="quiz__option-label">до 20&nbsp;000 ₽</span>
+                    <span class="quiz__option-label">до 5&nbsp;000 ₽</span>
                     <span class="quiz__option-check" aria-hidden="true"></span>
                   </button>
                   <button class="quiz__option" data-value="budget-mid" type="button">
-                    <span class="quiz__option-label">20&nbsp;000 — 40&nbsp;000 ₽</span>
+                    <span class="quiz__option-label">5&nbsp;000 — 10&nbsp;000 ₽</span>
                     <span class="quiz__option-check" aria-hidden="true"></span>
                   </button>
                   <button class="quiz__option" data-value="budget-high" type="button">
-                    <span class="quiz__option-label">от 40&nbsp;000 ₽</span>
+                    <span class="quiz__option-label">от 10&nbsp;000 ₽</span>
                     <span class="quiz__option-check" aria-hidden="true"></span>
                   </button>
                 </div>
@@ -766,7 +799,7 @@
                   <input class="quiz__input" id="quiz-phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
                   <label class="quiz__consent">
                     <input type="checkbox" class="quiz__checkbox" id="quiz-consent">
-                    <span class="quiz__consent-text">Я соглашаюсь с <a href="#" class="quiz__consent-link">политикой конфиденциальности</a></span>
+                    <span class="quiz__consent-text">Я соглашаюсь с <a href="./privacy.html" class="quiz__consent-link">политикой конфиденциальности</a></span>
                   </label>
                 </div>
               </div>
@@ -777,8 +810,8 @@
             <div class="quiz__success" id="quiz-success" aria-live="polite">
               <div class="quiz__success-icon" aria-hidden="true">
                 <svg class="quiz__success-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="32" cy="32" r="28" stroke="#e4ba45" stroke-width="2.5"/>
-                  <path d="M20 33 29 42 44 24" stroke="#e4ba45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2.5"/>
+                  <path d="M20 33 29 42 44 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
               <h3 class="quiz__success-title">Спасибо! Варианты уже подбираем</h3>
@@ -818,8 +851,8 @@
               </span>
               <span class="reviews__rating">4.9</span>
               <span class="reviews__divider" aria-hidden="true">·</span>
-              <a class="reviews__link" href="https://vk.com" target="_blank" rel="noopener">
-                120 отзывов на ВКонтакте
+              <a class="reviews__link" href="https://vk.com/irishkin_sharik" target="_blank" rel="noopener">
+                Отзывы на ВКонтакте
                 <svg class="reviews__link-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2 12L12 2M12 2H5M12 2v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -925,21 +958,21 @@
               <p class="cta__subtitle">Напишите удобным способом — обсудим детали и рассчитаем стоимость. Отвечаю быстро.</p>
 
               <div class="cta__socials">
-                <a class="cta__social" href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте">
+                <a class="cta__social" href="https://vk.com/irishkin_sharik" target="_blank" rel="noopener" aria-label="ВКонтакте">
                   <svg class="cta__social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z" fill="none"/>
                     <path d="M12.676 16.5c-5.267 0-8.27-3.617-8.392-9.626h2.637c.082 4.411 2.031 6.282 3.569 6.67V6.874h2.484v3.8c1.52-.163 3.116-1.904 3.655-3.8h2.484a7.384 7.384 0 01-3.39 4.839 7.637 7.637 0 013.776 4.787h-2.73a4.71 4.71 0 00-3.795-3.39v3.39h-.298z" fill="currentColor"/>
                   </svg>
                   <span>ВКонтакте</span>
                 </a>
-                <a class="cta__social" href="https://max.ru" target="_blank" rel="noopener" aria-label="Max">
+                <a class="cta__social" href="https://max.ru/u/f9LHodD0cOLvgBHjp9xeVZrOtt4Y-TFF7keS7iDaWhk1gXdK15sl3KG1Tik" target="_blank" rel="noopener" aria-label="Max">
                   <svg class="cta__social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
                     <path d="M7.5 15.5V8.5l4.5 4 4.5-4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span>Max</span>
                 </a>
-                <a class="cta__social" href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">
+                <a class="cta__social" href="https://t.me/IrishkaSk15" target="_blank" rel="noopener" aria-label="Telegram">
                   <svg class="cta__social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M21.8 4.1L2.6 11.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.3.7.2 1 .9 1 .5 0 .8-.2 1.1-.5l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-.9L22.8 5.2c.3-1.4-.5-2-1-1.1z" fill="currentColor"/>
                   </svg>
@@ -996,7 +1029,7 @@
 
                 <label class="cta__consent">
                   <input class="cta__checkbox" type="checkbox" id="cta-consent">
-                  <span class="cta__consent-text">Я соглашаюсь с <a href="#" class="cta__consent-link">политикой конфиденциальности</a></span>
+                  <span class="cta__consent-text">Я соглашаюсь с <a href="./privacy.html" class="cta__consent-link">политикой конфиденциальности</a></span>
                 </label>
 
                 <button class="cta__submit" type="submit">
@@ -1032,10 +1065,10 @@
           <div class="footer__col footer__col--brand">
             <a class="footer__logo" href="#top" aria-label="Королевский шар — на главную">
               <img
-                src="./assets/brand/logo.svg"
+                src="./assets/brand/logo.png"
                 alt="Королевский шар"
-                width="160"
-                height="32"
+                width="81"
+                height="63"
                 decoding="async"
                 class="footer__logo-img"
               />
@@ -1044,20 +1077,20 @@
 
             <div class="footer__socials" aria-label="Мы в соцсетях">
               <!-- ВКонтакте -->
-              <a class="footer__social" href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте">
+              <a class="footer__social" href="https://vk.com/irishkin_sharik" target="_blank" rel="noopener" aria-label="ВКонтакте">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M12.676 16.5c-5.267 0-8.27-3.617-8.392-9.626h2.637c.082 4.411 2.031 6.282 3.569 6.67V6.874h2.484v3.8c1.52-.163 3.116-1.904 3.655-3.8h2.484a7.384 7.384 0 01-3.39 4.839 7.637 7.637 0 013.776 4.787h-2.73a4.71 4.71 0 00-3.795-3.39v3.39h-.298z" fill="currentColor"/>
                 </svg>
               </a>
               <!-- Max -->
-              <a class="footer__social" href="https://max.ru" target="_blank" rel="noopener" aria-label="Max">
+              <a class="footer__social" href="https://max.ru/u/f9LHodD0cOLvgBHjp9xeVZrOtt4Y-TFF7keS7iDaWhk1gXdK15sl3KG1Tik" target="_blank" rel="noopener" aria-label="Max">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
                   <path d="M7.5 15.5V8.5l4.5 4 4.5-4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
               <!-- Telegram -->
-              <a class="footer__social" href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">
+              <a class="footer__social" href="https://t.me/IrishkaSk15" target="_blank" rel="noopener" aria-label="Telegram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M21.8 4.1L2.6 11.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.3.7.2 1 .9 1 .5 0 .8-.2 1.1-.5l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-.9L22.8 5.2c.3-1.4-.5-2-1-1.1z" fill="currentColor"/>
                 </svg>
@@ -1083,20 +1116,35 @@
             <h3 class="footer__col-title">Контакты</h3>
             <ul class="footer__contacts">
               <li>
-                <a class="footer__contact" href="tel:+79202702531" aria-label="Телефон">
+                <a class="footer__contact" href="tel:+79996091510" aria-label="Телефон">
                   <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M14.4 10.907c-.44-.427-2.827-1.84-3.36-2.027-.533-.186-.813-.013-.973.24l-.48.76c-.16.24-.307.267-.56.133-.8-.427-2.2-1.493-3.147-2.64-.88-1.067-1.373-2.347-1.56-2.96-.107-.347-.027-.507.2-.587l.88-.293c.28-.08.573-.293.44-.787-.16-.547-1.04-3.093-1.413-3.427-.373-.333-.68-.253-.88-.16A4.8 4.8 0 001.6 2.547c-.32.293-.96 1.28-.16 3.04.8 1.76 1.813 3.267 3.387 4.8 1.573 1.533 3.04 2.48 5.04 3.253 2 .773 3.04.24 3.413-.053a4.933 4.933 0 001.28-1.44c.187-.32.24-.6-.16-.853-.053-.027-.013-.013 0 0-.04-.04-.04-.04 0 0z" fill="currentColor"/>
                   </svg>
-                  +7 (920) 270-25-31
+                  +7 999 609-15-10
                 </a>
               </li>
               <li>
-                <a class="footer__contact" href="mailto:info@korolevskiy-shar.ru" aria-label="Email">
+                <a class="footer__contact" href="mailto:Irishkaskorova@gmail.com" aria-label="Email">
                   <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.25"/>
                     <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
                   </svg>
-                  info@korolevskiy-shar.ru
+                  Irishkaskorova@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  class="footer__contact"
+                  href="https://yandex.com.tr/maps/-/CPbZeQjc"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Адрес на карте"
+                >
+                  <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 14s5-4.15 5-8a5 5 0 0 0-10 0c0 3.85 5 8 5 8z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <circle cx="8" cy="6" r="1.75" stroke="currentColor" stroke-width="1.25"/>
+                  </svg>
+                  Адрес: ул. Студенческая 1, Европа-40, этаж 1
                 </a>
               </li>
             </ul>
@@ -1109,8 +1157,15 @@
 
         <!-- Нижняя строка -->
         <div class="footer__bottom">
-          <p class="footer__copy">© 2026 Королевский шар. Курск</p>
-          <a class="footer__privacy" href="#">Политика конфиденциальности</a>
+          <div class="footer__legal" aria-label="Реквизиты">
+            <p class="footer__copy">
+              ИП Орлова Ирина Андреевна<br />
+              ИНН 463225468106<br />
+              ОГРНИП 323460000022294
+            </p>
+            <p class="footer__copy">© 2026 Королевский шар. Курск</p>
+          </div>
+          <a class="footer__privacy" href="./privacy.html">Политика конфиденциальности</a>
           <p class="footer__dev">
             Разработка сайта
             <a class="footer__dev-link" href="https://www.kazankov.studio/" target="_blank" rel="noopener">Kazankov Studio</a>
@@ -1182,7 +1237,7 @@
 
             <label class="cta__consent">
               <input class="cta__checkbox" type="checkbox" id="order-request-consent">
-              <span class="cta__consent-text">Я соглашаюсь с <a href="#" class="cta__consent-link">политикой конфиденциальности</a></span>
+              <span class="cta__consent-text">Я соглашаюсь с <a href="./privacy.html" class="cta__consent-link">политикой конфиденциальности</a></span>
             </label>
 
             <button class="cta__submit" type="submit">
@@ -1265,7 +1320,7 @@
 
             <label class="cta__consent">
               <input class="cta__checkbox" type="checkbox" id="order-interest-consent">
-              <span class="cta__consent-text">Я соглашаюсь с <a href="#" class="cta__consent-link">политикой конфиденциальности</a></span>
+              <span class="cta__consent-text">Я соглашаюсь с <a href="./privacy.html" class="cta__consent-link">политикой конфиденциальности</a></span>
             </label>
 
             <button class="cta__submit" type="submit">
@@ -1311,6 +1366,455 @@
           loading="lazy"
           decoding="async"
         />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const CSV_URL =
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vQWIZLJ7xeZj936IykQpQ9Ll_jTAGWMFKckRZeDdbYm23UQPWHdZIWrV7P-eSkaxVLRvkTcOrmb0qQH/pub?output=csv";
+
+        const grid = document.getElementById("catalogGrid");
+        if (!grid) return;
+
+        // Remove existing listeners from script.js by cloning nodes.
+        const filtersWrap = document.querySelector(".catalog__filters");
+        const originalFilterButtons = Array.from(filtersWrap?.querySelectorAll("[data-filter]") || []);
+        const filterButtons = originalFilterButtons.map((btn) => {
+          const clone = btn.cloneNode(true);
+          btn.parentNode?.replaceChild(clone, btn);
+          return clone;
+        });
+
+        const oldMoreBtn = document.getElementById("catalog-more");
+        let moreBtn = oldMoreBtn;
+        if (oldMoreBtn) {
+          const clone = oldMoreBtn.cloneNode(true);
+          oldMoreBtn.parentNode?.replaceChild(clone, oldMoreBtn);
+          moreBtn = clone;
+        }
+
+        const state = {
+          all: [],
+          filter: "all",
+          page: 1,
+          perPage: 6,
+        };
+
+        const CATALOG_MORE_LABEL = "Показать еще работы";
+        const CATALOG_MORE_DONE = "Работы показаны";
+
+        function showSkeletons() {
+          grid.innerHTML = "";
+          if (moreBtn) {
+            moreBtn.hidden = true;
+            moreBtn.disabled = false;
+            moreBtn.textContent = CATALOG_MORE_LABEL;
+            moreBtn.removeAttribute("aria-disabled");
+          }
+          for (let i = 0; i < 3; i += 1) {
+            const card = document.createElement("article");
+            card.className = "catalog-card catalog-card--skeleton";
+            card.innerHTML = `
+              <div class="catalog-card__image catalog-skel__img" aria-hidden="true"></div>
+              <div class="catalog-card__body">
+                <div class="catalog-skel__line catalog-skel__title" aria-hidden="true"></div>
+                <div class="catalog-skel__line" aria-hidden="true"></div>
+                <div class="catalog-skel__line catalog-skel__line--short" aria-hidden="true"></div>
+                <div class="catalog-card__bottom">
+                  <div class="catalog-skel__line catalog-skel__price" aria-hidden="true"></div>
+                  <div class="catalog-skel__btn" aria-hidden="true"></div>
+                </div>
+              </div>
+            `;
+            grid.appendChild(card);
+          }
+        }
+
+        function showError() {
+          grid.innerHTML = "";
+          const msg = document.createElement("div");
+          msg.className = "catalog-error";
+          msg.innerText = "Не удалось загрузить каталог.\nПопробуйте обновить страницу.";
+          grid.appendChild(msg);
+          if (moreBtn) moreBtn.hidden = true;
+        }
+
+        function parseBool(v) {
+          return String(v || "").trim().toLowerCase() === "true";
+        }
+
+        function parseCSV(text) {
+          const lines = String(text || "").replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n").filter(Boolean);
+          if (!lines.length) return [];
+
+          function splitLine(line) {
+            const out = [];
+            let cur = "";
+            let inQuotes = false;
+            for (let i = 0; i < line.length; i += 1) {
+              const ch = line[i];
+              if (ch === '"') {
+                const next = line[i + 1];
+                if (inQuotes && next === '"') {
+                  cur += '"';
+                  i += 1;
+                } else {
+                  inQuotes = !inQuotes;
+                }
+                continue;
+              }
+              if (ch === "," && !inQuotes) {
+                out.push(cur);
+                cur = "";
+                continue;
+              }
+              cur += ch;
+            }
+            out.push(cur);
+            return out.map((s) => s.trim());
+          }
+
+          const headers = splitLine(lines[0]).map((h) => h.trim());
+          const rows = [];
+          for (let i = 1; i < lines.length; i += 1) {
+            const cols = splitLine(lines[i]);
+            if (!cols.length) continue;
+            const obj = {};
+            headers.forEach((h, idx) => {
+              obj[h] = cols[idx] ?? "";
+            });
+            rows.push(obj);
+          }
+          return rows;
+        }
+
+        function toDirectImageUrl(url) {
+          const u = String(url || "").trim();
+          if (!u) return "";
+
+          // Google Drive: share/view/open → thumbnail (стабильнее для <img>)
+          let fileId = "";
+          const filePath = u.match(/drive\.google\.com\/file\/d\/([^/?#]+)/i);
+          if (filePath && filePath[1]) fileId = filePath[1];
+          if (!fileId && /drive\.google\.com/i.test(u)) {
+            const idParam = u.match(/[?&]id=([^&]+)/i);
+            if (idParam && idParam[1]) fileId = idParam[1];
+          }
+          if (fileId) return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+          return u;
+        }
+
+        function categoryLabel(category) {
+          const map = {
+            hit: "Хит",
+            dr: "День рождения",
+            svadba: "Свадьба",
+            vypiska: "Выписка",
+            otkrytie: "Открытие",
+            podarki: "Подарки",
+          };
+          return map[category] || "Каталог";
+        }
+
+        // Map existing chip values → sheet category codes
+        function normalizeFilter(filter) {
+          const map = {
+            all: "all",
+            hit: "hit",
+            birthday: "dr",
+            wedding: "svadba",
+            discharge: "vypiska",
+            opening: "otkrytie",
+            gifts: "podarki",
+            podarki: "podarki",
+            dr: "dr",
+            svadba: "svadba",
+            vypiska: "vypiska",
+            otkrytie: "otkrytie",
+          };
+          return map[filter] || filter;
+        }
+
+        function getFilteredItems() {
+          const f = normalizeFilter(state.filter);
+          if (f === "all") return state.all;
+          if (f === "hit") return state.all.filter((x) => x.is_hit);
+          return state.all.filter((x) => x.category === f);
+        }
+
+        function setActiveFilter(nextFilter) {
+          state.filter = nextFilter;
+          state.page = 1;
+
+          filterButtons.forEach((b) => {
+            const isActive = (b.getAttribute("data-filter") || "all") === nextFilter;
+            b.classList.toggle("active", isActive);
+            b.classList.toggle("chip--active", isActive);
+            b.setAttribute("aria-selected", String(isActive));
+          });
+        }
+
+        function render(reset = false) {
+          const items = getFilteredItems();
+          const limit = state.page * state.perPage;
+          const slice = items.slice(0, limit);
+
+          if (reset) grid.innerHTML = "";
+
+          // Render only the newly required items on "load more"
+          const already = grid.querySelectorAll(".catalog-card:not(.catalog-card--skeleton)").length;
+          const next = slice.slice(already);
+
+          next.forEach((item) => {
+            const card = document.createElement("article");
+            card.className = "catalog-card";
+            card.setAttribute("data-category", item.category === "hit" ? "hit" : item.category);
+
+            const badge = document.createElement("span");
+            badge.className = "catalog-card__badge" + (item.category === "hit" ? " catalog-card__badge--hit" : "");
+            badge.textContent = categoryLabel(item.category);
+            if (item.category === "hit") {
+              badge.innerHTML = `Хит <span aria-hidden="true">🔥</span>`;
+            }
+
+            let mediaEl = null;
+            if (!item.image) {
+              const ph = document.createElement("div");
+              ph.className = "catalog-card__image catalog-img-ph";
+              ph.setAttribute("aria-label", "Изображение временно недоступно");
+              ph.innerHTML = `<span class="catalog-img-ph__emoji" aria-hidden="true">🎈</span>`;
+              mediaEl = ph;
+            } else {
+              const img = document.createElement("img");
+              img.className = "catalog-card__image";
+              img.alt = item.name ? item.name : "Композиция из шаров";
+              img.width = 392;
+              img.height = 201;
+              img.loading = "lazy";
+              img.decoding = "async";
+              img.src = item.image;
+
+              img.addEventListener(
+                "error",
+                () => {
+                  const ph = document.createElement("div");
+                  ph.className = "catalog-card__image catalog-img-ph";
+                  ph.setAttribute("aria-label", "Изображение временно недоступно");
+                  ph.innerHTML = `<span class="catalog-img-ph__emoji" aria-hidden="true">🎈</span>`;
+                  img.replaceWith(ph);
+                },
+                { once: true }
+              );
+
+              mediaEl = img;
+            }
+
+            const body = document.createElement("div");
+            body.className = "catalog-card__body";
+
+            const title = document.createElement("h3");
+            title.className = "catalog-card__title";
+            title.textContent = item.name || "Композиция";
+
+            const desc = document.createElement("p");
+            desc.className = "catalog-card__text";
+            desc.textContent = item.description || "";
+
+            const bottom = document.createElement("div");
+            bottom.className = "catalog-card__bottom";
+
+            const price = document.createElement("div");
+            price.className = "catalog-card__price";
+            const priceText =
+              typeof item.price === "number" && Number.isFinite(item.price)
+                ? `${item.price.toLocaleString("ru-RU")} ₽`
+                : "по запросу";
+            price.textContent = priceText;
+
+            const btn = document.createElement("a");
+            btn.className = "btn btn--primary btn--sm";
+            btn.href = "#order";
+            btn.textContent = "Хочу такую";
+
+            bottom.appendChild(price);
+            bottom.appendChild(btn);
+
+            body.appendChild(title);
+            body.appendChild(desc);
+            body.appendChild(bottom);
+
+            card.appendChild(badge);
+            card.appendChild(mediaEl);
+            card.appendChild(body);
+            grid.appendChild(card);
+          });
+
+          if (moreBtn) {
+            if (items.length === 0) {
+              moreBtn.hidden = true;
+              moreBtn.disabled = false;
+              moreBtn.textContent = CATALOG_MORE_LABEL;
+              moreBtn.removeAttribute("aria-disabled");
+            } else if (items.length <= limit) {
+              moreBtn.hidden = false;
+              moreBtn.disabled = true;
+              moreBtn.textContent = CATALOG_MORE_DONE;
+              moreBtn.setAttribute("aria-disabled", "true");
+            } else {
+              moreBtn.hidden = false;
+              moreBtn.disabled = false;
+              moreBtn.textContent = CATALOG_MORE_LABEL;
+              moreBtn.removeAttribute("aria-disabled");
+            }
+          }
+        }
+
+        async function init() {
+          // Clear existing cards
+          showSkeletons();
+
+          try {
+            // Google Sheets "pub?output=csv" often responds with 307 redirect to
+            // a googleusercontent URL. Some browsers block CORS on such redirects.
+            // Workaround: first resolve final URL via a no-cors probe, then fetch CSV directly.
+            let finalUrl = CSV_URL;
+            try {
+              const probe = await fetch(CSV_URL, { mode: "no-cors", redirect: "follow" });
+              if (probe && typeof probe.url === "string" && probe.url) {
+                finalUrl = probe.url;
+              }
+            } catch (_) {
+              // If probe fails, fall back to original URL (may still work in some environments).
+            }
+
+            const res = await fetch(finalUrl, { cache: "no-store" });
+            if (!res.ok) throw new Error(String(res.status));
+            const csvText = await res.text();
+
+            const rows = parseCSV(csvText);
+            const items = rows
+              .map((r) => {
+                const name = r.name ?? r.Name ?? r.NAME ?? "";
+                const categoryRaw = r.category ?? r.Category ?? r.CATEGORY ?? "";
+                const activeRaw = r.active ?? r.Active ?? r.ACTIVE ?? "TRUE";
+
+                // support both schemas (with/without is_hit column)
+                const isHitRaw = r.is_hit ?? r.isHit ?? r.hit ?? r.IS_HIT ?? "";
+                const priceRaw = r.price ?? r.Price ?? r.PRICE ?? "";
+                const description = r.description ?? r.Description ?? r.DESCRIPTION ?? "";
+                const imageRaw = r.image ?? r.Image ?? r.IMAGE ?? "";
+
+                const category = String(categoryRaw || "").trim();
+                const is_hit = parseBool(isHitRaw) || category === "hit";
+                const active = parseBool(activeRaw);
+
+                const num = Number(String(priceRaw || "").replace(/\s/g, "").replace(",", "."));
+                const price = Number.isFinite(num) ? num : null;
+
+                return {
+                  name: String(name || "").trim(),
+                  category: category,
+                  is_hit,
+                  price,
+                  description: String(description || "").trim(),
+                  image: toDirectImageUrl(imageRaw),
+                  active,
+                };
+              })
+              .filter((x) => x.active);
+
+            state.all = items;
+
+            // Ensure dynamic "Хочу такую" buttons open the existing interest modal
+            // (script.js binds only to links present at initial load).
+            document.addEventListener("click", (e) => {
+              const a = e.target instanceof Element ? e.target.closest("#catalogGrid a[href=\"#order\"]") : null;
+              if (!a) return;
+              const card = a.closest(".catalog-card");
+              if (!card) return;
+
+              const interestModal = document.getElementById("order-modal-interest");
+              const interestCloseBtn = interestModal?.querySelector(".order-modal__close");
+              const interestForm = document.getElementById("order-interest-form");
+              const interestSuccess = document.getElementById("order-interest-success");
+              const interestTitleEl = document.getElementById("order-interest-title");
+              if (!interestModal) return;
+
+              e.preventDefault();
+
+              // Reset interest form state (same behavior as in script.js)
+              if (interestForm) {
+                const wrap = interestForm.closest(".cta__form-wrap");
+                const header = wrap?.querySelector(".cta__form-header");
+                if (header) header.style.display = "";
+                interestForm.style.display = "";
+                interestForm.reset();
+                interestForm.querySelectorAll(".is-error").forEach((el) => el.classList.remove("is-error"));
+              }
+              if (interestSuccess) interestSuccess.classList.remove("is-visible");
+
+              const title = card.querySelector(".catalog-card__title")?.textContent?.trim() || "выбранный вариант";
+              if (interestTitleEl) interestTitleEl.textContent = title;
+
+              interestModal.classList.add("is-open");
+              interestModal.setAttribute("aria-hidden", "false");
+              document.body.style.overflow = "hidden";
+              interestCloseBtn?.focus();
+            }, { passive: false });
+
+            // Hook up filters
+            filterButtons.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                const next = btn.getAttribute("data-filter") || "all";
+                setActiveFilter(next);
+                grid.innerHTML = "";
+                render(true);
+              });
+            });
+
+            // Initial filter: keep existing active chip if any
+            const initial = filterButtons.find((b) => b.classList.contains("chip--active"))?.getAttribute("data-filter") || "all";
+            setActiveFilter(initial);
+
+            // Load more
+            moreBtn?.addEventListener("click", () => {
+              state.page += 1;
+              render(false);
+            });
+
+            grid.innerHTML = "";
+            render(true);
+          } catch (e) {
+            showError();
+          }
+        }
+
+        init();
+      });
+    </script>
+
+    <div
+      id="cookie-banner"
+      class="cookie-banner"
+      role="dialog"
+      aria-labelledby="cookie-banner-title"
+      aria-describedby="cookie-banner-desc"
+      aria-live="polite"
+      hidden
+      inert
+    >
+      <div class="cookie-banner__inner">
+        <p id="cookie-banner-title" class="cookie-banner__title">Файлы cookie</p>
+        <p id="cookie-banner-desc" class="cookie-banner__text">
+          Мы используем cookie для стабильной работы сайта и улучшения сервиса. Продолжая пользоваться сайтом, вы соглашаетесь с
+          <a class="cookie-banner__link" href="./privacy.html">политикой конфиденциальности</a>.
+        </p>
+        <div class="cookie-banner__actions">
+          <button type="button" class="btn btn--primary btn--sm cookie-banner__accept" id="cookie-banner-accept">
+            Принять
+          </button>
+        </div>
       </div>
     </div>
   </body>

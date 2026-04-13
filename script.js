@@ -26,6 +26,147 @@ const mobileBackdrop = document.querySelector(".mobile-menu__backdrop");
 const header = document.querySelector(".header");
 const catalogMoreBtn = document.querySelector("#catalog-more");
 
+// ===== Leads to Pipedream (Telegram bot) =====
+// ВСТАВЬ СЮДА URL to trigger из Pipedream (Webhook URL):
+// пример: https://eoxxxxxx.m.pipedream.net
+const PIPEDREAM_TRIGGER_URL = "https://eotipdcz42d6ohw.m.pipedream.net";
+
+async function sendLeadToPipedream(payload) {
+  if (!PIPEDREAM_TRIGGER_URL) return;
+  try {
+    const controller = "AbortController" in window ? new AbortController() : null;
+    const t = controller ? window.setTimeout(() => controller.abort(), 8000) : null;
+
+    await fetch(PIPEDREAM_TRIGGER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+      signal: controller?.signal,
+      keepalive: true,
+    });
+
+    if (t) window.clearTimeout(t);
+  } catch (_) {
+    // намеренно молчим: UX формы важнее, чем показ ошибок
+  }
+}
+
+function normalizePhone(value) {
+  return String(value || "").replace(/\D/g, "");
+}
+
+function isValidPhone(value) {
+  const d = normalizePhone(value);
+  // РФ: +7XXXXXXXXXX или 8XXXXXXXXXX (11 цифр) или без кода страны (10 цифр)
+  if (d.length === 11 && (d.startsWith("7") || d.startsWith("8"))) return true;
+  if (d.length === 10) return true;
+  return false;
+}
+
+function markErrorField(el) {
+  if (!el) return;
+  el.classList.add("is-error");
+  const clear = () => el.classList.remove("is-error");
+  el.addEventListener("input", clear, { once: true });
+  el.addEventListener("change", clear, { once: true });
+}
+
+// Все поля type="tel" на странице (CTA, квиз, модалки, в т.ч. на privacy.html)
+(function initPhoneFieldsValidation() {
+  function bindTel(input) {
+    if (!(input instanceof HTMLInputElement) || input.type !== "tel") return;
+    input.addEventListener("blur", () => {
+      const v = input.value.trim();
+      if (!v) {
+        input.classList.remove("is-error");
+        return;
+      }
+      if (!isValidPhone(input.value)) markErrorField(input);
+      else input.classList.remove("is-error");
+    });
+    input.addEventListener("input", () => {
+      if (isValidPhone(input.value)) input.classList.remove("is-error");
+    });
+  }
+  document.querySelectorAll('input[type="tel"]').forEach(bindTel);
+})();
+
+function buildLeadMessage(data) {
+  if (!data || typeof data !== "object") return "";
+  const lines = [];
+
+  const push = (label, value) => {
+    const v = String(value ?? "").trim();
+    if (!v) return;
+    lines.push(`${label}: ${v}`);
+  };
+
+  push("Имя", data.name);
+  push("Номер", data.phone);
+  push("Дата", data.date);
+  push("Тип", data.type);
+  push("Интересует", data.interestTitle);
+  push("Комментарий", data.comment);
+
+  if (data.wishes) push("Пожелания", data.wishes);
+
+  if (data.answers && typeof data.answers === "object") {
+    // Человеческие подписи для ответов квиза
+    const map = {
+      // шаг 1
+      photobooth: "Фотозона",
+      balloons: "Оформление шарами",
+      complex: "Комплексное оформление",
+      // шаг 2
+      birthday: "День рождения",
+      corporate: "Корпоратив",
+      wedding: "Свадьба",
+      gender: "Гендер-пати",
+      other: "Другое",
+      // шаг 3
+      "budget-low": "до 5 000 ₽",
+      "budget-mid": "5 000 — 10 000 ₽",
+      "budget-high": "от 10 000 ₽",
+      // шаг 4
+      urgent: "Сегодня / завтра",
+      soon: "В ближайшие дни",
+    };
+
+    const a = data.answers;
+    const step1 = map[a[1]] || a[1];
+    const step2 = map[a[2]] || a[2];
+    const step3 = map[a[3]] || a[3];
+    const step4 = a[4] ? (map[a[4]] || a[4]) : "";
+
+    if (step1) lines.push(`Что нужно оформить: ${step1}`);
+    if (step2) lines.push(`Праздник: ${step2}`);
+    if (step3) lines.push(`Бюджет: ${step3}`);
+    if (step4) lines.push(`Когда: ${step4}`);
+  }
+
+  return lines.join("\n");
+}
+
+async function sendLeadTextToPipedream(message) {
+  const text = String(message || "").trim();
+  if (!text) return;
+  // Отправляем уже готовый текст, чтобы в Telegram не приходил JSON с кавычками/скобками
+  await sendLeadToPipedream({ text });
+}
+
+function formatEventType(value) {
+  const v = String(value || "").trim();
+  const map = {
+    birthday: "День рождения",
+    wedding: "Свадьба",
+    discharge: "Выписка из роддома",
+    opening: "Открытие магазина",
+    gift: "Подарок",
+    other: "Другое",
+  };
+  return map[v] || v;
+}
+
 let isCatalogExtrasShown = false;
 
 function setMenuOpen(next) {
@@ -221,15 +362,20 @@ catalogMoreBtn?.addEventListener("click", () => {
     const phoneInput = document.getElementById("quiz-phone");
     let valid = true;
 
-    [nameInput, phoneInput].forEach((inp) => {
-      if (!inp) return;
-      const empty = !inp.value.trim();
-      inp.classList.toggle("is-error", empty);
-      if (empty) valid = false;
-      inp.addEventListener("input", () => inp.classList.remove("is-error"), { once: true });
-    });
+    if (!nameInput?.value?.trim()) {
+      markErrorField(nameInput);
+      valid = false;
+    }
+    if (!phoneInput?.value?.trim() || !isValidPhone(phoneInput.value)) {
+      markErrorField(phoneInput);
+      valid = false;
+    }
 
-    if (!valid) return;
+    if (!valid) {
+      if (!nameInput?.value?.trim()) nameInput?.focus();
+      else phoneInput?.focus();
+      return;
+    }
 
     // Hide quiz content, show success
     [stepsWrap, progressEl, navEl].forEach((el) => {
@@ -240,8 +386,13 @@ catalogMoreBtn?.addEventListener("click", () => {
 
     if (successEl) successEl.classList.add("is-visible");
 
-    // Optional: send answers somewhere
-    console.log("Quiz answers:", { ...answers, wishes: document.getElementById("quiz-wishes")?.value });
+    const payload = {
+      name: nameInput?.value?.trim() || "",
+      phone: phoneInput?.value?.trim() || "",
+      answers: { ...answers },
+      wishes: document.getElementById("quiz-wishes")?.value?.trim() || "",
+    };
+    sendLeadTextToPipedream(buildLeadMessage(payload));
   }
 
   // ── Option selection ───────────────────────────────────────────
@@ -410,9 +561,7 @@ if (revealEls.length) {
   const typeSelect = form.querySelector("#cta-type");
 
   function markError(el) {
-    el.classList.add("is-error");
-    el.addEventListener("input", () => el.classList.remove("is-error"), { once: true });
-    el.addEventListener("change", () => el.classList.remove("is-error"), { once: true });
+    markErrorField(el);
   }
 
   form.addEventListener("submit", (e) => {
@@ -420,8 +569,8 @@ if (revealEls.length) {
 
     let valid = true;
 
-    if (!nameInput.value.trim()) { markError(nameInput); valid = false; }
-    if (!phoneInput.value.trim()) { markError(phoneInput); valid = false; }
+    if (!nameInput?.value?.trim()) { markError(nameInput); valid = false; }
+    if (!phoneInput?.value?.trim() || !isValidPhone(phoneInput.value)) { markError(phoneInput); valid = false; }
 
     if (!valid) {
       (form.querySelector(".is-error"))?.focus();
@@ -432,12 +581,46 @@ if (revealEls.length) {
     form.style.display = "none";
     if (successEl) successEl.classList.add("is-visible");
 
-    console.log("CTA form:", {
-      name: nameInput.value.trim(),
-      phone: phoneInput.value.trim(),
-      type: typeSelect?.value,
-      comment: form.querySelector("#cta-comment")?.value.trim(),
-    });
+    const payload = {
+      name: nameInput?.value?.trim() || "",
+      phone: phoneInput?.value?.trim() || "",
+      type: formatEventType(typeSelect?.value || ""),
+      comment: form.querySelector("#cta-comment")?.value.trim() || "",
+    };
+    sendLeadTextToPipedream(buildLeadMessage(payload));
+  });
+})();
+
+// ===== CTA / модалки: дата — открыть календарь по клику на всё поле и подпись =====
+(function () {
+  document.querySelectorAll(".cta__field").forEach((field) => {
+    const input = field.querySelector('input.cta__input[type="date"]');
+    if (!input) return;
+
+    let lastOpen = 0;
+    const openPicker = () => {
+      const now = Date.now();
+      if (now - lastOpen < 350) return;
+      lastOpen = now;
+      try {
+        if (typeof input.showPicker === "function") {
+          input.showPicker();
+        } else {
+          input.focus();
+        }
+      } catch (_) {
+        input.focus();
+      }
+    };
+
+    input.addEventListener("click", openPicker);
+
+    const label = field.querySelector("label.cta__label");
+    if (label && label.getAttribute("for") === input.id) {
+      label.addEventListener("click", () => {
+        requestAnimationFrame(openPicker);
+      });
+    }
   });
 })();
 
@@ -499,14 +682,17 @@ if (revealEls.length) {
       e.preventDefault();
       const nameInput = requestForm.querySelector("#order-request-name");
       const phoneInput = requestForm.querySelector("#order-request-phone");
+      const dateInput = requestForm.querySelector("#order-request-date");
+      const typeSelect = requestForm.querySelector("#order-request-type");
+      const commentEl = requestForm.querySelector("#order-request-comment");
 
       let valid = true;
-      if (!nameInput.value.trim()) {
-        nameInput.classList.add("is-error");
+      if (!nameInput?.value?.trim()) {
+        markErrorField(nameInput);
         valid = false;
       }
-      if (!phoneInput.value.trim()) {
-        phoneInput.classList.add("is-error");
+      if (!phoneInput?.value?.trim() || !isValidPhone(phoneInput?.value)) {
+        markErrorField(phoneInput);
         valid = false;
       }
 
@@ -520,6 +706,15 @@ if (revealEls.length) {
       if (headerEl) headerEl.style.display = "none";
       requestForm.style.display = "none";
       if (requestSuccess) requestSuccess.classList.add("is-visible");
+
+      const payload = {
+        name: nameInput.value.trim(),
+        phone: phoneInput.value.trim(),
+        date: dateInput?.value || "",
+        type: formatEventType(typeSelect?.value || ""),
+        comment: commentEl?.value?.trim() || "",
+      };
+      sendLeadTextToPipedream(buildLeadMessage(payload));
     });
   }
 
@@ -528,14 +723,17 @@ if (revealEls.length) {
       e.preventDefault();
       const nameInput = interestForm.querySelector("#order-interest-name");
       const phoneInput = interestForm.querySelector("#order-interest-phone");
+      const dateInput = interestForm.querySelector("#order-interest-date");
+      const typeSelect = interestForm.querySelector("#order-interest-type");
+      const commentEl = interestForm.querySelector("#order-interest-comment");
 
       let valid = true;
-      if (!nameInput.value.trim()) {
-        nameInput.classList.add("is-error");
+      if (!nameInput?.value?.trim()) {
+        markErrorField(nameInput);
         valid = false;
       }
-      if (!phoneInput.value.trim()) {
-        phoneInput.classList.add("is-error");
+      if (!phoneInput?.value?.trim() || !isValidPhone(phoneInput?.value)) {
+        markErrorField(phoneInput);
         valid = false;
       }
 
@@ -549,6 +747,16 @@ if (revealEls.length) {
       if (headerEl) headerEl.style.display = "none";
       interestForm.style.display = "none";
       if (interestSuccess) interestSuccess.classList.add("is-visible");
+
+      const payload = {
+        interestTitle: interestTitleEl?.textContent?.trim() || "",
+        name: nameInput.value.trim(),
+        phone: phoneInput.value.trim(),
+        date: dateInput?.value || "",
+        type: formatEventType(typeSelect?.value || ""),
+        comment: commentEl?.value?.trim() || "",
+      };
+      sendLeadTextToPipedream(buildLeadMessage(payload));
     });
   }
 
@@ -582,6 +790,36 @@ if (revealEls.length) {
       resetForm(requestForm, requestSuccess);
       openModal(requestModal, requestCloseBtn);
     });
+  });
+})();
+
+// ===== Cookie banner =====
+(function initCookieBanner() {
+  const STORAGE_KEY = "korolevshar_cookie_consent_v1";
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("cookie-banner-accept");
+  if (!banner || !acceptBtn) return;
+
+  function hideBanner() {
+    banner.hidden = true;
+    banner.setAttribute("inert", "");
+    document.body.classList.remove("has-cookie-banner");
+  }
+
+  if (localStorage.getItem(STORAGE_KEY) === "1") {
+    hideBanner();
+    return;
+  }
+
+  banner.hidden = false;
+  banner.removeAttribute("inert");
+  document.body.classList.add("has-cookie-banner");
+
+  acceptBtn.addEventListener("click", () => {
+    try {
+      localStorage.setItem(STORAGE_KEY, "1");
+    } catch (_) {}
+    hideBanner();
   });
 })();
 
