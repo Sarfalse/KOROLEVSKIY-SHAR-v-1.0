@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/figma/
+
+Sitemap: https://korolevshar.ru/sitemap.xml
