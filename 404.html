@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница не найдена — Королевский шар</title>
+    <meta name="description" content="Страница не найдена. Вернитесь на главную — Королевский шар, оформление шарами в Курске." />
+    <meta name="robots" content="noindex, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./assets/brand/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://korolevshar.ru/404.html" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+
+    <style>
+      /* ===== 404 page ===== */
+      .notfound {
+        min-height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 24px 80px;
+        text-align: center;
+      }
+
+      .notfound__inner {
+        max-width: 560px;
+        width: 100%;
+      }
+
+      .notfound__balloons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 32px;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .notfound__balloon {
+        animation: balloon-float 3s ease-in-out infinite;
+      }
+
+      .notfound__balloon:nth-child(2) { animation-delay: 0.4s; }
+      .notfound__balloon:nth-child(3) { animation-delay: 0.8s; }
+
+      @keyframes balloon-float {
+        0%, 100% { transform: translateY(0); }
+        50%       { transform: translateY(-12px); }
+      }
+
+      .notfound__code {
+        font-family: Montserrat, Inter, system-ui, sans-serif;
+        font-weight: 700;
+        font-size: clamp(80px, 20vw, 140px);
+        line-height: 1;
+        background: linear-gradient(135deg, var(--accent) 0%, #e57fca 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0 0 8px;
+        letter-spacing: -2px;
+      }
+
+      .notfound__title {
+        font-family: Montserrat, Inter, system-ui, sans-serif;
+        font-weight: 700;
+        font-size: clamp(22px, 5vw, 32px);
+        color: var(--text);
+        margin: 0 0 16px;
+        line-height: 1.2;
+      }
+
+      .notfound__subtitle {
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        margin: 0 0 40px;
+      }
+
+      .notfound__actions {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 480px) {
+        .notfound__actions {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .notfound__actions .btn {
+          width: 100%;
+          max-width: 280px;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header" aria-label="Шапка сайта">
+      <div class="header__container">
+        <a class="header__logo" href="./index.html" aria-label="Королевский шар — на главную">
+          <img
+            src="./assets/brand/logo.png"
+            alt="Королевский шар"
+            width="81"
+            height="63"
+            decoding="async"
+          />
+        </a>
+
+        <nav class="header__nav" aria-label="Навигация">
+          <a class="header__link" href="./index.html#catalog">Каталог</a>
+          <a class="header__link" href="./index.html#about">О мастере</a>
+          <a class="header__link" href="./index.html#reviews">Отзывы</a>
+          <a class="header__link" href="./index.html#contacts">Контакты</a>
+        </nav>
+
+        <a class="header__phone" href="tel:+79996091510" aria-label="Позвонить +7 999 609-15-10">
+          <img
+            class="header__phone-icon"
+            src="./assets/icons/phone.svg"
+            alt=""
+            width="18"
+            height="18"
+            decoding="async"
+          />
+          <span class="header__phone-text">+7 999 609-15-10</span>
+        </a>
+
+        <a class="btn btn--primary header__cta" href="./index.html#order">Обсудить заказ</a>
+
+        <button
+          class="header__burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="header__burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+        <div class="mobile-menu__panel">
+          <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+            <a class="mobile-menu__link" href="./index.html#catalog">Каталог</a>
+            <a class="mobile-menu__link" href="./index.html#about">О мастере</a>
+            <a class="mobile-menu__link" href="./index.html#reviews">Отзывы</a>
+            <a class="mobile-menu__link" href="./index.html#contacts">Контакты</a>
+          </nav>
+
+          <a class="mobile-menu__phone" href="tel:+79996091510">
+            <img src="./assets/icons/phone.svg" alt="" width="18" height="18" />
+            <span>+7 999 609-15-10</span>
+          </a>
+
+          <a class="btn btn--primary mobile-menu__cta" href="./index.html#order">Обсудить заказ</a>
+        </div>
+        <button class="mobile-menu__backdrop" type="button" aria-label="Закрыть меню"></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="notfound" aria-label="Страница не найдена">
+        <div class="notfound__inner">
+
+          <!-- Три парящих шарика -->
+          <div class="notfound__balloons" aria-hidden="true">
+            <!-- шарик розовый -->
+            <svg class="notfound__balloon" width="56" height="72" viewBox="0 0 56 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="28" cy="26" rx="22" ry="25" fill="#C45C9E" opacity="0.9"/>
+              <path d="M28 51 Q26 58 24 65 Q27 63 30 65 Q28 58 28 51Z" fill="#A8417F"/>
+              <line x1="28" y1="51" x2="28" y2="52" stroke="#A8417F" stroke-width="1.5"/>
+            </svg>
+            <!-- шарик светло-розовый -->
+            <svg class="notfound__balloon" width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="24" cy="22" rx="19" ry="21" fill="#e57fca" opacity="0.85"/>
+              <path d="M24 43 Q22 50 20 57 Q23 55 26 57 Q24 50 24 43Z" fill="#C45C9E"/>
+            </svg>
+            <!-- шарик сиреневый -->
+            <svg class="notfound__balloon" width="52" height="68" viewBox="0 0 52 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="26" cy="24" rx="20" ry="23" fill="#b868c4" opacity="0.8"/>
+              <path d="M26 47 Q24 54 22 61 Q25 59 28 61 Q26 54 26 47Z" fill="#9a4dab"/>
+            </svg>
+          </div>
+
+          <p class="notfound__code">404</p>
+
+          <h1 class="notfound__title">Эта страница улетела&nbsp;🎈</h1>
+
+          <p class="notfound__subtitle">
+            Возможно, ссылка устарела или страница была перемещена.<br />
+            Но мы ещё здесь — и готовы оформить ваш праздник!
+          </p>
+
+          <div class="notfound__actions">
+            <a class="btn btn--primary" href="./index.html">На главную</a>
+            <a class="btn btn--outline" href="./index.html#catalog">
+              Смотреть каталог
+              <span class="btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                  <path d="M9 1.28564V17.9999" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M4.5 5.78564L9 1.28564L13.5 5.78564" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" aria-label="Подвал сайта">
+      <div class="container">
+
+        <div class="footer__top">
+
+          <!-- Колонка 1: лого + слоган + соцсети -->
+          <div class="footer__col footer__col--brand">
+            <a class="footer__logo" href="./index.html" aria-label="Королевский шар — на главную">
+              <img
+                src="./assets/brand/logo.png"
+                alt="Королевский шар"
+                width="81"
+                height="63"
+                decoding="async"
+                class="footer__logo-img"
+              />
+            </a>
+            <p class="footer__tagline">Авторские композиции из&nbsp;воздушных шаров в&nbsp;Курске. Оформление любых мероприятий под ключ.</p>
+
+            <div class="footer__socials" aria-label="Мы в соцсетях">
+              <a class="footer__social" href="https://vk.com/irishkin_sharik" target="_blank" rel="noopener" aria-label="ВКонтакте">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12.676 16.5c-5.267 0-8.27-3.617-8.392-9.626h2.637c.082 4.411 2.031 6.282 3.569 6.67V6.874h2.484v3.8c1.52-.163 3.116-1.904 3.655-3.8h2.484a7.384 7.384 0 01-3.39 4.839 7.637 7.637 0 013.776 4.787h-2.73a4.71 4.71 0 00-3.795-3.39v3.39h-.298z" fill="currentColor"/>
+                </svg>
+              </a>
+              <a class="footer__social" href="https://max.ru/u/f9LHodD0cOLvgBHjp9xeVZrOtt4Y-TFF7keS7iDaWhk1gXdK15sl3KG1Tik" target="_blank" rel="noopener" aria-label="Max">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M7.5 15.5V8.5l4.5 4 4.5-4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="footer__social" href="https://t.me/IrishkaSk15" target="_blank" rel="noopener" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M21.8 4.1L2.6 11.6c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 5.8c.3.7.2 1 .9 1 .5 0 .8-.2 1.1-.5l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-.9L22.8 5.2c.3-1.4-.5-2-1-1.1z" fill="currentColor"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Колонка 2: Навигация -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">Навигация</h3>
+            <nav aria-label="Навигация в подвале">
+              <ul class="footer__nav">
+                <li><a class="footer__link" href="./index.html#catalog">Каталог</a></li>
+                <li><a class="footer__link" href="./index.html#reviews">Отзывы</a></li>
+                <li><a class="footer__link" href="./index.html#about">О мастере</a></li>
+                <li><a class="footer__link" href="./index.html#contacts">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Колонка 3: Контакты -->
+          <div class="footer__col">
+            <h3 class="footer__col-title">Контакты</h3>
+            <ul class="footer__contacts">
+              <li>
+                <a class="footer__contact" href="tel:+79996091510" aria-label="Телефон">
+                  <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M14.4 10.907c-.44-.427-2.827-1.84-3.36-2.027-.533-.186-.813-.013-.973.24l-.48.76c-.16.24-.307.267-.56.133-.8-.427-2.2-1.493-3.147-2.64-.88-1.067-1.373-2.347-1.56-2.96-.107-.347-.027-.507.2-.587l.88-.293c.28-.08.573-.293.44-.787-.16-.547-1.04-3.093-1.413-3.427-.373-.333-.68-.253-.88-.16A4.8 4.8 0 001.6 2.547c-.32.293-.96 1.28-.16 3.04.8 1.76 1.813 3.267 3.387 4.8 1.573 1.533 3.04 2.48 5.04 3.253 2 .773 3.04.24 3.413-.053a4.933 4.933 0 001.28-1.44c.187-.32.24-.6-.16-.853-.053-.027-.013-.013 0 0-.04-.04-.04-.04 0 0z" fill="currentColor"/>
+                  </svg>
+                  +7 999 609-15-10
+                </a>
+              </li>
+              <li>
+                <a class="footer__contact" href="mailto:Irishkaskorova@gmail.com" aria-label="Email">
+                  <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+                  </svg>
+                  Irishkaskorova@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  class="footer__contact"
+                  href="https://yandex.com.tr/maps/-/CPbZeQjc"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Адрес на карте"
+                >
+                  <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 14s5-4.15 5-8a5 5 0 0 0-10 0c0 3.85 5 8 5 8z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <circle cx="8" cy="6" r="1.75" stroke="currentColor" stroke-width="1.25"/>
+                  </svg>
+                  Адрес: ул. Студенческая 1, Европа-40, этаж 1
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer__divider" aria-hidden="true"></div>
+
+        <div class="footer__bottom">
+          <div class="footer__legal" aria-label="Реквизиты">
+            <p class="footer__copy">
+              ИП Орлова Ирина Андреевна<br />
+              ИНН 463225468106<br />
+              ОГРНИП 323460000022294
+            </p>
+            <p class="footer__copy">© 2026 Королевский шар. Курск</p>
+          </div>
+          <a class="footer__privacy" href="./privacy.html">Политика конфиденциальности</a>
+          <p class="footer__dev">
+            Разработка сайта
+            <a class="footer__dev-link" href="https://www.kazankov.studio/" target="_blank" rel="noopener">Kazankov Studio</a>
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  </body>
+</html>
